@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html>
+    
+    <head>
+        <title>Explore Iceland</title>
+    </head>
+    
+    <body>
+        <h1>Explore Iceland</h1>
+        <div>
+            hey there partner! <br />
+            <strong>{{ boldmessage }}</strong><br />
+        </div>
+        <div>
+            <a href="/ExploreIceland/about/">About</a><br />
+            <a href="/ExploreIceland/attraction/">Attraction</a><br />
+            <img src="{% static "images/index.jpg" %}"
+            alt="Picture of ice cave" />
+        </div>
+    </body>
+</html>
