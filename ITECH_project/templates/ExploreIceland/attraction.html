@@ -1,23 +1,23 @@
-<!DOCTYPE html>
+{% extends 'ExploreIceland/base.html' %}
 {% load staticfiles %}
 
-<html>
-    
-    <head>
-        <title>Attraction</title>
-    </head>
-    
-    <body>
-        <h1>Attraction page</h1>
-        <div>
-            attraction page <br />
-            
-        </div>
-        <div>
-            <a href="/ExploreIceland/">Index</a><br />
-            
-        </div>
-    </body>
-</html>
+{% block title_block %}
+    {{ category.name }}
+{% endblock %}
 
+{% block body_block %}
+        <h1> Attraction </h1>
+        {% if categories %}
+        <ul>
+            {% for category in categories %}
+            <li>
+                <a href="/ExploreIceland/attractioncategory/{{ category.slug }}">{{ category.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            <strong>There are no categories present.</strong>
+        {% endif %}
+        </div>
 
+{% endblock %}
