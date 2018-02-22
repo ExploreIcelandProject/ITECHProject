@@ -8,5 +8,8 @@ urlpatterns = [
     url(r'^attraction/',views.attraction, name='attraction'),
     url(r'^attractioncategory/(?P<category_name_slug>[\w\-]+)/$',
         views.show_attractioncategory, name='show_attractioncategory'),
-    url(r'^register/$',views.register,name='register'),
+    
+    
+    url(r'^restricted/', views.restricted, name='restricted'),
+   url(r'^base_bootstrap/', views.base_bootstrap, name='base_bootstrap'),
 ]

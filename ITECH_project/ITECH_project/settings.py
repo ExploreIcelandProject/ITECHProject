@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ExploreIceland',
+    'registration'
 ]
 
 MIDDLEWARE = [
@@ -129,6 +130,14 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
+
+#LOGIN_URL = '/ExploreIceland/login/'
+
+REGISTRATION_OPEN = True
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
+LOGIN_REDIRECT_URL = '/ExploreIceland/'
+LOGIN_URL = '/accounts/login/'
 
 
 
