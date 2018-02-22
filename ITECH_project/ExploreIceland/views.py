@@ -32,6 +32,20 @@ def attraction(request):
     
     return render(request, 'ExploreIceland/attraction.html', context=context_dict)
 
+def city(request):
+    return render(request, 'ExploreIceland/city.html',)
+
+def activity(request):
+    return render(request, 'ExploreIceland/activity.html',)
+
+def wildanimal(request):
+    return render(request, 'ExploreIceland/wildanimal.html',)
+
+def gallery(request):
+    return render(request, 'ExploreIceland/gallery.html',)
+
+def contact(request):
+    return render(request, 'ExploreIceland/contact.html',)
 
 def show_attractioncategory(request, category_name_slug):
     context_dict = {}

@@ -6,6 +6,11 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^about/',views.about, name='about'),
     url(r'^attraction/',views.attraction, name='attraction'),
+    url(r'^city/',views.city, name='city'),
+    url(r'^activity/',views.activity, name='activity'),
+    url(r'^wildanimal/',views.wildanimal, name='wildanimal'),
+    url(r'^gallery/',views.gallery, name='gallery'),
+    url(r'^contact/',views.contact, name='contact'),
     url(r'^attractioncategory/(?P<category_name_slug>[\w\-]+)/$',
         views.show_attractioncategory, name='show_attractioncategory'),
     

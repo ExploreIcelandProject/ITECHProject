@@ -10,62 +10,100 @@
                     <meta name="author" content="">
                         <link rel="icon" href="../../favicon.ico">
                             
-                            <title>Explore Iceland Cover Template for Bootstrap</title>
+                            <title>Explore Iceland Narrow Jumbotron Template for Bootstrap</title>
                             
                             <!-- Bootstrap core CSS -->
                             <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
                                 
                                 <!-- Custom styles for this template -->
-                                <link href={% static "css/cover.css" %} rel="stylesheet">
+                                <link href={% static "css/about.css" %} rel="stylesheet">
                                     </head>
     
     <body>
         
-        <div class="site-wrapper">
-            
-            <div class="site-wrapper-inner">
-                
-                <div class="cover-container">
-                    
-                    <div class="masthead clearfix">
-                        <div class="inner">
-                            <h3 class="masthead-brand">ITECH</h3>
-                            <nav class="nav nav-masthead">
-                                <a class="nav-link active" href="{% url 'index' %}">Home</a>
-                                <a class="nav-link" href="{% url 'about' %}">About</a>
-                                <a class="nav-link" href="{% url 'attraction' %}">Attraction</a>
-                            </nav>
-                        </div>
-                    </div>
-                    
-                    <div class="inner cover">
-                        <h1 class="cover-heading">Explore Iceland</h1>
-                        <p class="lead">Let's go traveling around ICELAND...</p>
-                        <p class="lead">
-                        <a href="{% url 'about' %}" class="btn btn-lg btn-secondary">See more</a>
-                        </p>
-                    </div>
-                    
-                    <div class="mastfoot">
-                        <div class="inner">
-                            <p>Cover template for <a href="https://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-                        </div>
-                    </div>
-                    
-                </div>
-                
+        <div class="container">
+            <div class="header clearfix">
+                <nav>
+                    <ul class="nav nav-pills float-right">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'index' %}">Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{% url 'about' %}">About <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'attraction' %}">Attraction</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'city' %}">City</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'activity' %}">Activity</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'wildanimal' %}">Wild Animal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+                            
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'auth_logout' %}">Logout</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'registration_register' %}">Sing Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'auth_login' %}">Login</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+                <h3 class="text-muted">Explore Iceland</h3>
             </div>
             
-        </div>
+            <div class="jumbotron">
+                <h1 class="display-3">wonderland</h1>
+                <p class="lead">test test test</p>
+                <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+            </div>
+            
+            <div class="row marketing">
+                <div class="col-lg-6">
+                    <h3>About</h3>
+                    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+                    
+                
+                </div>
+                
+                <div class="col-lg-6">
+                    <h4>Subheading</h4>
+                    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+                    
+                    <h4>Subheading</h4>
+                    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+                    
+                    <h4>Subheading</h4>
+                    <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <p>&copy; Company 2017</p>
+            </footer>
+            
+        </div> <!-- /container -->
         
         <!-- Bootstrap core JavaScript
          ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-        <script src="../../dist/js/bootstrap.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     </body>
 </html>
+
