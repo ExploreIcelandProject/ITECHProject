@@ -1,15 +1,109 @@
 
-{% extends 'ExploreIceland/base.html' %}
 {% load staticfiles %}
 
-{% block title_block %}
-{{ category.name }}
-{% endblock %}
 
 {% block body_block %}
-<h1>gallery page</h1>
-<div>
-    gallery page <br />
-    
-</div>
-{% endblock %}
+                            
+                            <!-- Bootstrap core CSS -->
+                            <link href="http://v4-alpha.getbootstrap.com/dist/css/dist/css/bootstrap.min.css" rel="stylesheet">
+                             <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+                                 
+                                <!-- Custom styles for this template -->
+                                <link href={% static "css/gallery.css" %} rel="stylesheet">
+                                
+                                    </head>
+
+       
+        
+        <section class="jumbotron text-center">
+            <div class="container">
+                
+               
+            </div>
+        </section>
+        
+        <div class="album text-muted">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="card">
+                        
+                            <img style='height: 280px; width: 356px; object-fit: cover' src="{% static "images/gallery1.jpg" %}" alt="Picture of gallery1" />
+                        
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            
+                        </div>
+                    <div class="card">
+                        
+                            <img style='height: 280px; width: 356px; object-fit: cover' src="{% static "images/gallery2.jpg" %}" alt="Picture of gallery2" />
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                    <div class="card">
+                        
+                        <img style='height: 280px; width: 356px; object-fit: cover' src="{% static "images/gallery3.jpg" %}" alt="Picture of gallery3" />
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                    
+                    <div class="card">
+                        
+                        <img style='height: 280px; width: 356px; object-fit: cover' src="{% static "images/gallery4.jpg" %}" alt="Picture of gallery4" />
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                    <div class="card">
+                        
+                        <img style='height: 280px; width: 356px; object-fit: cover' src="{% static "images/gallery5.jpg" %}" alt="Picture of gallery5" />
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                    <div class="card">
+                         <img style='height: 280px; width: 356px; object-fit: cover' src="{% static "images/gallery6.jpg" %}" alt="Picture of gallery6" />
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                    
+                    <div class="card">
+                         <img style='height: 280px; width: 356px; object-fit: cover' src="{% static "images/gallery7.jpg" %}" alt="Picture of gallery7" />
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                    <div class="card">
+                        <img style='height: 280px; width: 356px; object-fit: cover' src="{% static "images/gallery8.jpg" %}" alt="Picture of gallery8" />
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                    <div class="card">
+                        <img style='height: 280px; width: 356px; object-fit: cover' src="{% static "images/gallery9.jpg" %}" alt="Picture of gallery9" />
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <footer class="text-muted">
+            <div class="container">
+                <p class="float-right">
+                <a href="#">Back to top</a>
+                </p>
+                <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+                <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+            </div>
+        </footer>
+        {% endblock %}
+
+
+        <!-- Bootstrap core JavaScript
+         ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="http://v4-alpha.getbootstrap.com//assets/js/vendor/holder.min.js"></script>
+        <script>
+            $(function () {
+              Holder.addTheme("thumb", { background: "#55595c", foreground: "#eceeef", text: "Thumbnail" });
+              });
+            </script>
+        <script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+    </body>
+</html>
+
+
