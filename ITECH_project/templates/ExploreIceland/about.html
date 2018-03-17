@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 {% load staticfiles %}
-
+<link href={% static "css/attraction.css" %} rel="stylesheet">
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -29,22 +29,62 @@
                             <a class="nav-link" href="{% url 'index' %}">Home </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="{% url 'about' %}">About <span class="sr-only">(current)</span></a>
+                            <a class="nav-link " href="{% url 'about' %}">About </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'attraction' %}">Attraction</a>
+                            <div class="dropdown">
+                                <button class="dropbtn">Attraction</button>
+                                <div class="dropdown-content">
+                                    <a href="#Northern Light">Northern Light</a>
+                                    <a href="#Volcano">Volcano</a>
+                                    <a href="#Hot Sprin">Hot Spring</a>
+                                    <a href="#Waterfallt">Waterfall</a>
+                                    <a href="#Glacier">Glacier</a>
+                                </div>
+                            </div>
+                            
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'city' %}">City</a>
+                            <div class="dropdown">
+                                <button class="dropbtn">City</button>
+                                <div class="dropdown-content">
+                                    <a href="#Reykjavík">Reykjavík</a>
+                                    <a href="#Keflavík">Keflavík</a>
+                                    <a href="#Akureyri">Akureyri</a>
+                                    <a href="#Egilstaðir">Egilstaðir</a>
+                                    <a href="#Ísafjörður">Ísafjörður</a>
+                                </div>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'activity' %}">Activity</a>
+                            
+                            <div class="dropdown">
+                                <button class="dropbtn">Activity</button>
+                                <div class="dropdown-content">
+                                    <a href="#Hiking">Hiking</a>
+                                    <a href="#Ski">Ski</a>
+                                    <a href="#Ice Cave ">Ice Cave</a>
+                                    <a href="#Whale Cruise">Whale Cruise</a>
+                                    <a href="#Diving">Diving</a>
+                                    <a href="#Horse riding">Horse riding</a>
+                                </div>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'wildanimal' %}">Wild Animal</a>
+                            <div class="dropdown">
+                                <button class="dropbtn">Wild Animal</button>
+                                <div class="dropdown-content">
+                                    <a href="#Whale">Whale</a>
+                                    <a href="#Seal">Seal</a>
+                                    <a href="#Icelandic horse">Icelandic horse</a>
+                                    <a href="#Puffin">Puffin</a>
+                                    <a href="#Reindeer">Reindeer</a>
+                                </div>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+                            
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
@@ -56,7 +96,7 @@
                         </li>
                         {% else %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'registration_register' %}">Sing Up</a>
+                            <a class="nav-link" href="{% url 'registration_register' %}">Sign Up</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'auth_login' %}">Login</a>

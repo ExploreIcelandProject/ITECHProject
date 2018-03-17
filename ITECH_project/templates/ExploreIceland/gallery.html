@@ -3,24 +3,112 @@
 
 
 {% block body_block %}
-                            
-                            <!-- Bootstrap core CSS -->
-                            <link href="http://v4-alpha.getbootstrap.com/dist/css/dist/css/bootstrap.min.css" rel="stylesheet">
-                             <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-                                 
-                                <!-- Custom styles for this template -->
-                                <link href={% static "css/gallery.css" %} rel="stylesheet">
-                                
-                                    </head>
 
-       
-        
-        <section class="jumbotron text-center">
-            <div class="container">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) return;
+         js = d.createElement(s); js.id = id;
+         js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.12&appId=135348323953665&autoLogAppEvents=1';
+         fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));</script>
+
+<link href={% static "css/attraction.css" %} rel="stylesheet">
+
+<div class="container">
+    <div class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills float-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'about' %}">About </a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button class="dropbtn">Attraction</button>
+                        <div class="dropdown-content">
+                            <a href="#Northern Light">Northern Light</a>
+                            <a href="#Volcano">Volcano</a>
+                            <a href="#Hot Sprin">Hot Spring</a>
+                            <a href="#Waterfallt">Waterfall</a>
+                            <a href="#Glacier">Glacier</a>
+                        </div>
+                    </div>
+                    
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button class="dropbtn">City</button>
+                        <div class="dropdown-content">
+                            <a href="#Reykjavík">Reykjavík</a>
+                            <a href="#Keflavík">Keflavík</a>
+                            <a href="#Akureyri">Akureyri</a>
+                            <a href="#Egilstaðir">Egilstaðir</a>
+                            <a href="#Ísafjörður">Ísafjörður</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    
+                    <div class="dropdown">
+                        <button class="dropbtn">Activity</button>
+                        <div class="dropdown-content">
+                            <a href="#Hiking">Hiking</a>
+                            <a href="#Ski">Ski</a>
+                            <a href="#Ice Cave ">Ice Cave</a>
+                            <a href="#Whale Cruise">Whale Cruise</a>
+                            <a href="#Diving">Diving</a>
+                            <a href="#Horse riding">Horse riding</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button class="dropbtn">Wild Animal</button>
+                        <div class="dropdown-content">
+                            <a href="#Whale">Whale</a>
+                            <a href="#Seal">Seal</a>
+                            <a href="#Icelandic horse">Icelandic horse</a>
+                            <a href="#Puffin">Puffin</a>
+                            <a href="#Reindeer">Reindeer</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+                    
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+                    
+                </li>
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'auth_logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'registration_register' %}">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'auth_login' %}">Login</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        <h3 class="text-muted">Explore Iceland</h3>
+    </div>
+    <!-- Bootstrap core CSS -->
+    <link href="http://v4-alpha.getbootstrap.com/dist/css/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+            
+            <!-- Custom styles for this template -->
+            <link href={% static "css/gallery.css" %} rel="stylesheet">
                 
-               
-            </div>
-        </section>
+                </head>
+      
         
         <div class="album text-muted">
             <div class="container">
@@ -31,45 +119,55 @@
                             <img style='height: 280px; width: 356px; object-fit: cover' src="{% static "images/gallery1.jpg" %}" alt="Picture of gallery1" />
                         
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="fb-like" data-href="http://127.0.0.1:8000/ExploreIceland/gallery/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                             
                         </div>
                     <div class="card">
                         
                             <img style='height: 280px; width: 356px; object-fit: cover' src="{% static "images/gallery2.jpg" %}" alt="Picture of gallery2" />
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="fb-like" data-href="http://127.0.0.1:8000/ExploreIceland/gallery/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                             </div>
+                    
                     <div class="card">
                         
                         <img style='height: 280px; width: 356px; object-fit: cover' src="{% static "images/gallery3.jpg" %}" alt="Picture of gallery3" />
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="fb-like" data-href="http://127.0.0.1:8000/ExploreIceland/gallery/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                             </div>
                     
                     <div class="card">
                         
                         <img style='height: 280px; width: 356px; object-fit: cover' src="{% static "images/gallery4.jpg" %}" alt="Picture of gallery4" />
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="fb-like" data-href="http://127.0.0.1:8000/ExploreIceland/gallery/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                             </div>
                     <div class="card">
                         
                         <img style='height: 280px; width: 356px; object-fit: cover' src="{% static "images/gallery5.jpg" %}" alt="Picture of gallery5" />
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="fb-like" data-href="http://127.0.0.1:8000/ExploreIceland/gallery/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                             </div>
                     <div class="card">
                          <img style='height: 280px; width: 356px; object-fit: cover' src="{% static "images/gallery6.jpg" %}" alt="Picture of gallery6" />
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="fb-like" data-href="http://127.0.0.1:8000/ExploreIceland/gallery/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                             </div>
                     
                     <div class="card">
                          <img style='height: 280px; width: 356px; object-fit: cover' src="{% static "images/gallery7.jpg" %}" alt="Picture of gallery7" />
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="fb-like" data-href="http://127.0.0.1:8000/ExploreIceland/gallery/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                             </div>
                     <div class="card">
                         <img style='height: 280px; width: 356px; object-fit: cover' src="{% static "images/gallery8.jpg" %}" alt="Picture of gallery8" />
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="fb-like" data-href="http://127.0.0.1:8000/ExploreIceland/gallery/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                             </div>
                     <div class="card">
                         <img style='height: 280px; width: 356px; object-fit: cover' src="{% static "images/gallery9.jpg" %}" alt="Picture of gallery9" />
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="fb-like" data-href="http://127.0.0.1:8000/ExploreIceland/gallery/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                             </div>
                 </div>
                 
@@ -85,6 +183,8 @@
                 <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
             </div>
         </footer>
+        
+        
         {% endblock %}
 
 
