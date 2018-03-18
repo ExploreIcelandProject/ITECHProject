@@ -23,14 +23,17 @@ def index(request):
     return response
 
 def about(request):
-    return render(request, 'ExploreIceland/about.html',)
+    category_list=attractionCategory.objects.order_by('-likes')
+    page_list = attractionPage.objects.order_by('-views')[:5]
+    context_dict = {'categories': category_list,'pages': page_list
+}
+    return render(request, 'ExploreIceland/about.html',context=context_dict)
 
 def attraction(request):
     
-    category_list=attractionCategory.objects.order_by('-likes')
-    context_dict = {'categories': category_list}
     
-    return render(request, 'ExploreIceland/attraction.html', context=context_dict)
+    
+    return render(request, 'ExploreIceland/attraction.html', )
 
 def glacier(request):
     return render(request, 'ExploreIceland/glacier.html',)
@@ -78,7 +81,16 @@ def puffin(request):
     return render(request, 'ExploreIceland/puffin.html',)
 
 def reindeer(request):
-    return render(request, 'ExploreIceland/reindeer.html',)
+    
+    if(attractionPage.objects.count()<=0):
+        x=attractionPage.objects.create()
+        x.save()
+    else:
+        x=attractionPage.objects.all()[0]
+        x.views=x.views+1
+        x.save()
+    context={'page':x.views}
+    return render(request, 'ExploreIceland/reindeer.html',context=context)
 
 def gallery(request):
     return render(request, 'ExploreIceland/gallery.html',)

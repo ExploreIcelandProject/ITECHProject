@@ -37,20 +37,45 @@
             <div class="row marketing">
                 <div class="col-lg-6">
                     <h3>About</h3>
-                    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-                    
+                    <p>Using our information to prepare for your trip in Iceland!!</p>
+                    <p>Develop Team:</p>
+                    <p>Bartosz Lesiak      GUID. 2039270L</p>
+                    <p>Yada    Lawhavinit  GUID. 2312215L</p>
+                    <p>Yi-Chu  Chen        GUID. 2322710C</p>
+                    <p>Chieh   Teng        GUID. 2339910T</p>
                     
                 </div>
                 
                 <div class="col-lg-6">
-                    <h4>Subheading</h4>
-                    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+                    <h2>Category</h2>
                     
-                    <h4>Subheading</h4>
-                    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+                    <div>
+                        {% if categories %} <ul>
+                            {% for category in categories %}
+                            <!-- Following line changed to add an HTML hyperlink -->
+                            <li>
+                                <a href="/ExploreIceland/attractioncategory/{{ category.slug }}">{{ category.name }}</a> </li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                        <strong>There are no categories present.</strong> {% endif %}
+                    </div>
                     
-                    <h4>Subheading</h4>
-                    <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+                    <h2>Most Viewed Pages</h2>
+                    <div>
+                        {% if pages %}
+                        <ul>
+                            
+                            {% for page in pages %}
+                            <li>
+                                <a href="{{ page.url}}">{{ page.title}}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                        <strong>There are no pages present. </strong>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
             

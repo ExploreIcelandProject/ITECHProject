@@ -17,7 +17,7 @@ def populate():
         {"title":"Waterfall",
         "url":"http://facebook.com","views":100},
         {"title":"Glacier",
-        "url":"http://facebook.com","views":100}]
+        "url":"glacier","views":100}]
     city_pages = [
         {"title":"Reykjavík",
         "url":"http://facebook.com","views":100},
@@ -35,17 +35,31 @@ def populate():
         {"title":"Ski",
         "url":"http://facebook.com","views":100},
         {"title":"Ice Cave Exploring",
-        "url":"http://facebook.com","views":100},
+        "url":"icecaveexploring","views":100},
         {"title":"Whale Cruise",
-        "url":"http://facebook.com","views":100},
+        "url":"whalecruise","views":100},
         {"title":"Diving",
         "url":"http://facebook.com","views":100},
         {"title":"Horse riding",
         "url":"http://facebook.com","views":100}
          ]
+    wildanimal_pages = [
+        {"title":"Whale",
+        "url":"whale","views":100},
+        {"title":"seal",
+        "url":"seal","views":100},
+        {"title":"Icelandic horse",
+        "url":"horse","views":100},
+        {"title":"Puffin",
+        "url":"puffin","views":100},
+        {"title":"Reindeer",
+        "url":"reindeer","views":100},
+                          ]
     cats = {"Attraction": {"pages": attraction_pages,"views":100,"likes":100},
             "City": {"pages": city_pages,"views":100,"likes":100},
-            "Activity": {"pages": activity_pages,"views":100,"likes":100} }
+            "Activity": {"pages": activity_pages,"views":100,"likes":100},
+            "Wildanimal": {"pages": wildanimal_pages,"views":100,"likes":100}
+}
 
     for cat, cat_data in cats.items():
         c= add_cat(cat,cat_data["views"],cat_data["likes"])
