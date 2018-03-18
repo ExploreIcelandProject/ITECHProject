@@ -1,0 +1,55 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Seal</title>
+</head>
+
+{% block body_block %}
+    <img src="{% static "images/seal.jpg" %}"alt="Happy seals." style="width:1000px;">
+    <h1>Icelandic Seal</h1>
+        <p style="width:800px;text-align:justify;">Seals have used Iceland’s shores as a place to haul out, breed and shed for millenniums.
+        It’s cold fertile waters, and long stretches of rocky, uninhabited coast,
+        allowed large colonies to evolve before humans ever set foot here.</p>
+
+    <h3>The best places to see seals in Iceland</h3>
+    <ul>
+        <li>Jökulsárlón glacial lagoon</li>
+        <li>Vatnsnes Peninsula</li>
+        <li>Icelandic Seal Centre in Hvammstangi</li>
+        <li>Húsey-Úthérað sandy coast</li>
+        <li>Snæfellsnes Peninsula</li>
+    </ul>
+
+    <h3>When is a good time to see seals in Iceland?</h3>
+    <p style="width:800px;text-align:justify;">First, go check out this page and find out when it’s low tide. Then, for your best chance to see the seals,
+        go to your preferred spot between two hours before, and two hours after low tide. You have a better chance
+        if the weather is nice because then they´ll be hanging out, lying around and relaxing.</p>
+
+    <h2>Where is the best place to see seal?</h2>
+
+    <p>credit:<a href="https://www.travelreykjavik.com/">www.travelreykjavik.com</a></p>
+    https://www.travelreykjavik.com/blog/the-best-places-to-go-seal-watching-around-iceland
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="fb-like"
+         data-href="http://127.0.0.1:8000/ExploreIceland/seal/"
+         data-layout="standard"
+         data-action="like" data-size="small"
+         data-show-faces="true"
+         data-share="true"></div>
+
+    <div class="fb-comments"
+         data-href="http://127.0.0.1:8000/ExploreIceland/seal/"
+         data-numposts="5"></div>
+
+{% endblock %}

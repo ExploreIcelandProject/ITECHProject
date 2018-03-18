@@ -21,6 +21,7 @@
     
     <body>
         
+        
         <div class="site-wrapper">
             
             <div class="site-wrapper-inner">
@@ -31,32 +32,24 @@
                         <div class="inner">
                             <h3 class="masthead-brand">ITECH</h3>
                             <nav class="nav nav-masthead">
-                                <a class="nav-link active" href="{% url 'index' %}">Home</a>
-                                {% if user.is_authenticated %}
-                                <a class="nav-link active" href="{% url 'auth_logout' %}">Logout</a>
-                                 {% else %}
-                                <a class="nav-link" href="{% url 'registration_register' %}">Sign Up</a>
-                                <a class="nav-link" href="{% url 'auth_login' %}">Login</a>
-                                 {% endif %}
+                                
+                                
+                                </li>
                             </nav>
                         </div>
                     </div>
-                    <div>
-                        {% if user.is_authenticated %}
-                        hello {{ user.username }}!
-                        {% else %}
-                        hey there partner!
-                        {% endif %}
-                        <strong>{{ boldmessage }}</strong><br />
-                    </div>
+               
                     
                     <div class="inner cover">
                         <h1 class="cover-heading">Explore Iceland</h1>
                         <p class="lead">Let's go traveling around ICELAND...</p>
                         <p class="lead">
+                        
                         <a href="{% url 'about' %}" class="btn btn-lg btn-secondary">See more</a>
                         </p>
                     </div>
+                    
+                    
                     
                     <div class="mastfoot">
                         <div class="inner">
@@ -79,6 +72,7 @@
         <script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  
     </body>
 </html>
 

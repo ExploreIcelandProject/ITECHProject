@@ -1,0 +1,53 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reindeer</title>
+</head>
+
+{% block body_block %}
+    <img src="{% static "images/reindeer.jpg" %}"alt="Reindeer gangster." style="width:1000px;">
+    <h1>Icelandic Reindeer</h1>
+    <p style="width:800px;text-align:justify;">Reindeer were brought over to Iceland much later than the domestic animals, in the 18th Century.
+        Initially, they were to be farmed as they were across Scandinavia, but Icelanders never took to the practice.
+        The population, therefore, became wild.</p>
+
+
+    <h3>Today the wild reindeer live only in East Iceland.</h3>
+    <ul>
+        <li><a href="https://www.google.co.uk/maps/place/Sn%C3%A6fellsj%C3%B6kull/@64.8067248,-23.8119642,13z/data=!3m1!4b1!4m5!3m4!1s0x492a869c3b453aab:0xb6ebcb4c3a1183c!8m2!3d64.8057023!4d-23.7730966">Snæfell</a></li>
+        <li><a href="https://www.google.co.uk/maps/place/J%C3%B6kuls%C3%A1rl%C3%B3n/@64.0761707,-16.2793215,12z/data=!3m1!4b1!4m5!3m4!1s0x48cfd6ecd73a3819:0xcd05c959e10146a9!8m2!3d64.0784458!4d-16.2305537">Jökulsárlón</a></li>
+        <li><a href="https://www.google.co.uk/maps/place/Vopnafj%C3%B6r%C3%B0ur,+Iceland/@65.7462453,-14.8701147,15z/data=!3m1!4b1!4m5!3m4!1s0x48cc6525d2a9774f:0x111ea40959ac8f58!8m2!3d65.746246!4d-14.86136">Vopnafjördur</a></li>
+        <li>Brúaröræfi</li>
+    </ul>
+
+
+    <h3>Hungry Eater</h3>
+    <p style="width:800px;text-align:justify;">While the reindeer are well-loved across Iceland, their population is controlled seasonally, as it is a concern
+        that they may take food away from the grazing lands used by the free-roaming sheep.</p>
+
+    <h2>Where did you see them?</h2>
+
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="fb-like"
+         data-href="http://127.0.0.1:8000/ExploreIceland/reindeer/"
+         data-layout="standard"
+         data-action="like" data-size="small"
+         data-show-faces="true"
+         data-share="true"></div>
+
+    <div class="fb-comments"
+         data-href="http://127.0.0.1:8000/ExploreIceland/reindeer/"
+         data-numposts="5"></div>
+
+{% endblock %}

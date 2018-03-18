@@ -1,0 +1,55 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Whale</title>
+</head>
+
+
+{% block body_block %}
+    <img src="{% static "images/whale.jpg" %}"alt="Humpback whale fluke in front of Nattfari." style="width:1000px;">
+    <h1>Icelandic Whale</h1>
+    <h2 >A magical creature of ancient literature or
+        <br>Hero of a Hollywood blockbuster</h2>
+    <p style="width:800px;text-align:justify;">The summer months have generally been considered the high season for whale watching in Iceland
+        but the winter months have increasingly proved an exciting and adventurous whale watching period.</p>
+
+    <h3>Recommended Tour</h3>
+    <ul>
+        <li>SALKA WHALE WATCHING | <a href="http://salkawhalewatching.is/">salkawhalewatching.is</a></li>
+        <li>REYKJAVIK SAILORS | <a href="https://www.reykjaviksailors.is/">www.reykjaviksailors.is</a></li>
+        <li>WHALE SAFARI | <a href="http://www.whalesafari.is/">www.whalesafari.is</a></li>
+        <li>GENTLE GIANTS WHALE WATCHING | <a href="https://gentlegiants.is/home/">gentlegiants.is</a></li>
+    </ul>
+
+    <h3>Whales</h3>
+    <p style="width:800px;text-align:justify;">Icelandic waters cover areas from the cold Arctic sea in the north, to
+        the warmer north Atlantic ocean in the south. The two mixing currents, the long summer daylight combined with
+        the relatively shallow waters, makes an extremely favorable feeding area for the whales. Around Iceland it is
+        possible to find over 20 different species, 8 of which are frequently seen on whale watching tours.</p>
+
+    <h2>What species did you find, when, and where?</h2>
+
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="fb-like"
+         data-href="http://127.0.0.1:8000/ExploreIceland/whale/"
+         data-layout="standard"
+         data-action="like" data-size="small"
+         data-show-faces="true"
+         data-share="true"></div>
+
+    <div class="fb-comments"
+         data-href="http://127.0.0.1:8000/ExploreIceland/whale/"
+         data-numposts="5"></div>
+
+{% endblock %}

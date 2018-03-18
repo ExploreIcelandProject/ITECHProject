@@ -1,0 +1,60 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Puffin</title>
+</head>
+
+{% block body_block %}
+    <img src="{% static "images/puffin.jpg" %}"alt="Puffin gangster." style="width:1000px;">
+
+    <h1>Icelandic Puffin</h1>
+    <p style="width:800px;text-align:justify;">Puffins are considered to be rare and elusive birds in the majority of the world, but in Iceland,
+        there is a wealth of them. Their arrival in April and May mark the beginning of summer, and they can be
+        easily seen up close in many parts of the country until August.</p>
+
+
+    <h3>Top Spots to Watch Puffins in Iceland</h3>
+    <ul>
+        <li><a href="https://www.google.co.th/maps/place/Dyrh%C3%B3laey/@63.3995957,-19.1290863,17z/data=!3m1!4b1!4m5!3m4!1s0x48d749b2488fd399:0x2725ca255462e772!8m2!3d63.3995957!4d-19.1268976">Dyrhólaey</a></li>
+        <li><a href="https://www.google.co.th/maps/place/Heimaey/@63.522955,-20.8827708,8z/data=!4m5!3m4!1s0x48d708de81aa5695:0x1563b2ffe2c91359!8m2!3d63.427717!4d-20.2673821">Heimaey island</a></li>
+        <li><a href="https://www.google.co.th/maps/place/Ing%C3%B3lfsh%C3%B6f%C3%B0i/@63.79681,-16.652162,13.96z/data=!4m5!3m4!1s0x48d03db418e53c4f:0xdf5cacd13f641208!8m2!3d63.8!4d-16.64">Ingólfshöfði</a></li>
+        <li><a href="https://www.google.co.th/maps/place/Papey/@64.7941605,-15.5827944,6.84z/data=!4m5!3m4!1s0x48cedb3b2a64120d:0x962191342ea49143!8m2!3d64.5933554!4d-14.1659673">Papey island</a></li>
+        <li><a href="https://www.google.co.th/maps/place/Borgarfj%C3%B6r%C3%B0ur+Eystri,+Iceland/@65.5257641,-13.8341903,14z/data=!3m1!4b1!4m5!3m4!1s0x48cbedd016d899c7:0xea599bcd49b90425!8m2!3d65.5265799!4d-13.8182044">Borgarfjörður Eystri</a></li>
+        <li><a href="https://www.google.co.th/maps/place/Gr%C3%ADmsey/@66.5455864,-18.0385212,13z/data=!3m1!4b1!4m5!3m4!1s0x4f32a566a3de69d5:0x5bb01717100fb855!8m2!3d66.5423498!4d-17.996116">Grímsey island</a></li>
+        <li><a href="https://www.google.co.th/maps/place/L%C3%A1trabjarg/@65.5022731,-24.5333865,17z/data=!3m1!4b1!4m5!3m4!1s0x4ed55153affde155:0x6379224f4ee8c4f0!8m2!3d65.5022731!4d-24.5311978">Látrabjarg cliff</a></li>
+    </ul>
+
+
+    <h3>By walking along the edge of this cliff</h3>
+    <p style="width:800px;text-align:justify;">It is possible to get within arm’s length of the nesting puffins.
+        They have no fear of people, and will only fly off if someone is trying to touch them.
+        At such proximity, the details of their painted beaks and adorable expression are on clear display.</p>
+
+    <h2>Where is your favourite spot?</h2>
+
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="fb-like"
+         data-href="http://127.0.0.1:8000/ExploreIceland/puffin/"
+         data-layout="standard"
+         data-action="like" data-size="small"
+         data-show-faces="true"
+         data-share="true"></div>
+
+    <div class="fb-comments"
+         data-href="http://127.0.0.1:8000/ExploreIceland/puffin/"
+         data-numposts="5"></div>
+
+AIzaSyClU1eXKNGF76BVwf-UBm3tC35kRPy4iTg
+
+{% endblock %}

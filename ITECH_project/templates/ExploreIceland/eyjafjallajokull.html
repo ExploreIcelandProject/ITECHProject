@@ -1,0 +1,55 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eyjafjallajökull Glacier</title>
+</head>
+
+{% block body_block %}
+    <img src="{% static "images/Eyjafjallajokull.jpg" %}"alt="Eyjafjallajokull Glacier." style="width:800px;">
+
+    <h1>Eyjafjallajökull Glacier</h1>
+    <p style="width:800px;text-align:justify;">Although slightly smaller in size, this glacier is more famous than
+        its neighbour, Myrdalsjökull, due to the 2010 eruption of the Eyjafjallajökull volcano. The hiking trail is
+        a fantastic way to see two glaciers in Iceland in one, and it takes you to the very top of the newly erupted
+        volcano as well as the Skógafoss waterfall.Eyjafjallajokull and neighbouring Myrdalsjokull dominate the landscape
+        in South-Iceland and can be seen miles away. We recommend that you make a stop at viewpoints and admire the
+        volcanoes from afar. There are a few along the road.  </p>
+
+    <h2>How To Get There</h2>
+    <p style="width:800px;text-align:justify;">Driving along the South Shore brings you close to Eyjafjallajokull.
+        The Mountain Range is visible as soon as you drive east following road 1 from Reykjavik and you pass
+        Hellisheidi heath. There you can find Hellisheidi Geothermal Power Plant, which is visible from the road.</p>
+
+    <h2>What To Do</h2>
+    <ul>
+        <li>Jeep Tour</li>
+        <li>Hike Around Glacier</li>
+    </ul>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56717.339167450664!2d-19.6788901969067!3d63.62559681248069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d72470362206d1%3A0x65dae1daa9de1e38!2sEyjafjallaj%C3%B6kull!5e0!3m2!1sen!2suk!4v1520729175483"
+            width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <aside><div class="fb-like"
+         data-href="http://127.0.0.1:8000/ExploreIceland/eyjafjallajokull/"
+         data-layout="standard"
+         data-action="like" data-size="small"
+         data-show-faces="true"
+                data-share="true"></div></aside>
+
+    <div class="fb-comments"
+         data-href="http://127.0.0.1:8000/ExploreIceland/eyjafjallajokull/"
+         data-numposts="5"></div>
+
+
+{% endblock %}

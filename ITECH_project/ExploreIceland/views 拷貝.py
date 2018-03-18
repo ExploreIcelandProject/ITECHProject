@@ -18,7 +18,7 @@ def index(request):
     context_dict={}
     visitor_cookie_handler(request)
     context_dict['visits'] = request.session['visits']
-    
+
     response = render(request, 'ExploreIceland/index.html',context=context_dict)
     return response
 
@@ -32,53 +32,14 @@ def attraction(request):
     
     return render(request, 'ExploreIceland/attraction.html', context=context_dict)
 
-def glacier(request):
-    return render(request, 'ExploreIceland/glacier.html',)
-
-def vatnajokull(request):
-    return render(request, 'ExploreIceland/vatnajokull.html',)
-
-def langjokull(request):
-    return render(request, 'ExploreIceland/langjokull.html',)
-
-def hofsjokull(request):
-    return render(request, 'ExploreIceland/hofsjokull.html',)
-
-def myrdalsjokull(request):
-    return render(request, 'ExploreIceland/myrdalsjokull.html',)
-
-def eyjafjallajokull(request):
-    return render(request, 'ExploreIceland/eyjafjallajokull.html',)
-
 def city(request):
     return render(request, 'ExploreIceland/city.html',)
 
 def activity(request):
     return render(request, 'ExploreIceland/activity.html',)
 
-def icecaveexploring(request):
-    return render(request, 'ExploreIceland/icecaveexploring.html',)
-
-def whalecruise(request):
-    return render(request, 'ExploreIceland/whalecruise.html',)
-
 def wildanimal(request):
     return render(request, 'ExploreIceland/wildanimal.html',)
-
-def whale(request):
-    return render(request, 'ExploreIceland/whale.html',)
-
-def seal(request):
-    return render(request, 'ExploreIceland/seal.html',)
-
-def horse(request):
-    return render(request, 'ExploreIceland/horse.html',)
-
-def puffin(request):
-    return render(request, 'ExploreIceland/puffin.html',)
-
-def reindeer(request):
-    return render(request, 'ExploreIceland/reindeer.html',)
 
 def gallery(request):
     return render(request, 'ExploreIceland/gallery.html',)
@@ -94,11 +55,11 @@ def show_attractioncategory(request, category_name_slug):
         
         context_dict['pages'] = pages
         context_dict['category'] = category
-    
+
     except attractionCategory.DoesNotExist:
         context_dict['category'] = None
         context_dict['pages'] = None
-    
+
     return render(request, 'ExploreIceland/attractioncategory.html', context_dict)
 
 def base_bootstrap(request):
@@ -136,19 +97,8 @@ def visitor_cookie_handler(request):
         visits = 1
         # set the last visit cookie
         request.session['last_visit'] = last_visit_cookie
-        # Update/set the visits cookie
-        request.session['visits'] = visits
-
-
-
-
-
-
-
-
-
-
-
+    # Update/set the visits cookie
+    request.session['visits'] = visits
 
 
 

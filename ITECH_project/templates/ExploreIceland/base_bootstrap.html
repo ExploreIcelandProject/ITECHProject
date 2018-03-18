@@ -39,7 +39,7 @@
                                         <a href="#Volcano">Volcano</a>
                                         <a href="#Hot Sprin">Hot Spring</a>
                                         <a href="#Waterfallt">Waterfall</a>
-                                        <a href="#Glacier">Glacier</a>
+                                        <a href="{% url 'glacier' %}">Glacier</a>
                                     </div>
                                 </div>
                                 
@@ -48,11 +48,11 @@
                                 <div class="dropdown">
                                     <button class="dropbtn">City</button>
                                     <div class="dropdown-content">
-                                        <a href="#Reykjavík">Reykjavík</a>
-                                        <a href="#Keflavík">Keflavík</a>
-                                        <a href="#Akureyri">Akureyri</a>
-                                        <a href="#Egilstaðir">Egilstaðir</a>
-                                        <a href="#Ísafjörður">Ísafjörður</a>
+                                        <a href="{% url 'index' %}">Reykjavík</a>
+                                        <a href="{% url 'index' %}">Keflavík</a>
+                                        <a href="{% url 'index' %}">Akureyri</a>
+                                        <a href="{% url 'index' %}">Egilstaðir</a>
+                                        <a href="{% url 'index' %}">Ísafjörður</a>
                                     </div>
                                 </div>
                             </li>
@@ -63,8 +63,8 @@
                                     <div class="dropdown-content">
                                         <a href="#Hiking">Hiking</a>
                                         <a href="#Ski">Ski</a>
-                                        <a href="#Ice Cave ">Ice Cave</a>
-                                        <a href="#Whale Cruise">Whale Cruise</a>
+                                        <a href="{% url 'icecaveexploring' %}">Ice Cave</a>
+                                        <a href="{% url 'whalecruise' %}">Whale Cruise</a>
                                         <a href="#Diving">Diving</a>
                                         <a href="#Horse riding">Horse riding</a>
                                     </div>
@@ -74,11 +74,11 @@
                                 <div class="dropdown">
                                     <button class="dropbtn">Wild Animal</button>
                                     <div class="dropdown-content">
-                                        <a href="#Whale">Whale</a>
-                                        <a href="#Seal">Seal</a>
-                                        <a href="#Icelandic horse">Icelandic horse</a>
-                                        <a href="#Puffin">Puffin</a>
-                                        <a href="#Reindeer">Reindeer</a>
+                                        <a href="{% url 'whale' %}">Whale</a>
+                                        <a href="{% url 'seal' %}">Seal</a>
+                                        <a href="{% url 'horse' %}">Icelandic horse</a>
+                                        <a href="{% url 'puffin' %}">Puffin</a>
+                                        <a href="{% url 'reindeer' %}">Reindeer</a>
                                     </div>
                                 </div>
                             </li>
@@ -90,18 +90,11 @@
                                 <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
                                 
                             </li>
-                            {% if user.is_authenticated %}
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'auth_logout' %}">Logout</a>
+                             <fb:login-button autologoutlink="true"></fb:login-button>
+                                
                             </li>
-                            {% else %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'registration_register' %}">Sign Up</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'auth_login' %}">Login</a>
-                            </li>
-                            {% endif %}
+                            
                         </ul>
                     </nav>
                     <h3 class="text-muted">Explore Iceland</h3>

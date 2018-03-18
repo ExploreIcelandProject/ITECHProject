@@ -1,0 +1,57 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Horse</title>
+</head>
+
+{% block body_block %}
+    <img src="{% static "images/horse.jpg" %}"alt="A couple of horses." style="width:1000px;">
+    <h1>Icelandic Horse</h1>
+    <h2>One of the world’s purest breeds</h2>
+    <p style="width:800px;text-align:justify;">The Icelandic horse is a unique breed of smallish horses that came to Iceland with the first settlers
+        from Norway 1100 years ago. Archeological digs in Europe have revealed that it is descendent from
+        an ancient breed of horses that is now extinct outside of Iceland, where it has been preserved in isolation.</p>
+
+
+    <h3>Horse Riding Tours</h3>
+    <ul>
+        <li>Icelandic HorseWorld | <a href="http://www.iceworld.is/">www.iceworld.is</a></li>
+        <li>Riding Tours South Iceland | <a href="https://www.rtsi.is/">www.rtsi.is</a></li>
+        <li>Íslenski Hesturinn | <a href="http://islenskihesturinn.is/">islenskihesturinn.is</a></li>
+        <li>Viking Horses | <a href="https://vikinghorses.is/">vikinghorses.is</a></li>
+    </ul>
+
+
+    <h3>Not a pony</h3>
+    <p style="width:800px;text-align:justify;">The Icelandic horses are short and have similar characteristics to a pony, but they are definitely not a pony
+        and are sensitive if you call them that. The Icelandic horse comes in many colors, they can appear in up to
+        42 different color combinations! Some types of Icelandic horses coats even change color by seasons.
+        Icelandic horses have a lively temperament and love being around people. Because of their love for people,
+        they excel as therapy horses.</p>
+
+    <h2>How was your ride?</h2>
+
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="fb-like"
+         data-href="http://127.0.0.1:8000/ExploreIceland/horse/"
+         data-layout="standard"
+         data-action="like" data-size="small"
+         data-show-faces="true"
+         data-share="true"></div>
+
+    <div class="fb-comments"
+         data-href="http://127.0.0.1:8000/ExploreIceland/horse/"
+         data-numposts="5"></div>
+
+{% endblock %}

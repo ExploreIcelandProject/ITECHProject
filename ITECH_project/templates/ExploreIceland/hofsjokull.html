@@ -1,0 +1,53 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hofsjökull Glacier</title>
+</head>
+
+{% block body_block %}
+    <img src="{% static "images/hofsjokull.jpg" %}"alt="Hofsjokull Glacier." style="width:800px;">
+
+    <h1>Hofsjökull Glacier</h1>
+    <p style="width:800px;text-align:justify;">Hofsjokull is the third largest glacier in Iceland. However,
+        Hofsjökull glacier is notoriously hard to reach, which makes it more attractive as a destination!
+        Found in the middle of the Icelandic highlands, this part of Iceland is only accessible during the summer
+        months. Tours are available, but generally only in 4x4 vehicles and with knowledgeable guides. Getting to
+        Hofsjokull involves taking the Kjölur road which runs between Hofsjokull and Langjokull through the highlands.</p>
+
+    <h2>How To Get There</h2>
+    <p style="width:800px;text-align:justify;">Located right in the center of the island, the slopes are rather steep
+        and like every glacier has many crevasses. Due to its isolated location, we wouldn't advice you to go there alone.</p>
+
+    <h2>What To Do</h2>
+    <ul>
+        <li>Exploring the Glacier</li>
+        <li>Jeep Tour</li>
+    </ul>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28776.739488323474!2d-18.845640267286385!3d64.81873297657373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d3d051045bde43%3A0xc946138f3cdac5f5!2sHofsj%C3%B6kull!5e0!3m2!1sen!2suk!4v1520727863027"
+            width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <aside><div class="fb-like"
+         data-href="http://127.0.0.1:8000/ExploreIceland/hofsjokull/"
+         data-layout="standard"
+         data-action="like" data-size="small"
+         data-show-faces="true"
+                data-share="true"></div></aside>
+
+    <div class="fb-comments"
+         data-href="http://127.0.0.1:8000/ExploreIceland/hofsjokull/"
+         data-numposts="5"></div>
+
+
+{% endblock %}

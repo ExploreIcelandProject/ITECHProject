@@ -1,0 +1,59 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Glaciers</title>
+</head>
+
+{% block body_block %}
+    <img src="{% static "images/glacier.jpg" %}"alt="Glacier Cover." style="width:1000px;">
+
+    <h1>Glaciers in Iceland</h1>
+    <p style="width:1000px;text-align:justify;">Iceland is a glaciated country. Approximately 11% of  Iceland’s total
+        area of roughly 100.000 km2 is covered by glaciers. The largest ice caps in Iceland are located in the southern
+        and central highlands.</p>
+
+
+    <h3>Top 5 Glaciers in Iceland</h3>
+
+    <h4><a href="http://127.0.0.1:8000/ExploreIceland/vatnajokull/">1. Vatnajökull Glacier</a></h4>
+    <img src="{% static "images/vatnajokull.jpg" %}"alt="Vatnajokull Glacier." style="width:1000px;">
+
+    <h4><a href="http://127.0.0.1:8000/ExploreIceland/langjokull/">2. Langjökull Glacier</a></h4>
+    <img src="{% static "images/Langjokull.jpg" %}"alt="Langjokull Glacier." style="width:1000px;">
+
+    <h4><a href="http://127.0.0.1:8000/ExploreIceland/hofsjokull/">3. Hofsjökull Glacier</a></h4>
+    <img src="{% static "images/hofsjokull.jpg" %}"alt="Hofsjokull Glacier." style="width:1000px;">
+
+    <h4><a href="http://127.0.0.1:8000/ExploreIceland/myrdalsjokull/">4. Myrdalsjökull Glacier</a></h4>
+    <img src="{% static "images/Myrdalsjokull.jpg" %}"alt="Myrdalsjokull Glacier." style="width:1000px;">
+
+    <h4><a href="http://127.0.0.1:8000/ExploreIceland/eyjafjallajokull/">5. Eyjafjallajökull Glacier</a></h4>
+    <img src="{% static "images/Eyjafjallajokull.jpg" %}"alt="Eyjafjallajokull Glacier." style="width:1000px;">
+
+<p>credit:www.bookmundi.com</p>
+
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="fb-like"
+         data-href="http://127.0.0.1:8000/ExploreIceland/glacier/"
+         data-layout="standard"
+         data-action="like" data-size="small"
+         data-show-faces="true"
+         data-share="true"></div>
+
+    <div class="fb-comments"
+         data-href="http://127.0.0.1:8000/ExploreIceland/glacier/"
+         data-numposts="5"></div>
+
+
+{% endblock %}

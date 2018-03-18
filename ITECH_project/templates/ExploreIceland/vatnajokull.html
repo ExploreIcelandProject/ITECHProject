@@ -1,0 +1,57 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vatnajökull Glacier</title>
+</head>
+
+{% block body_block %}
+    <img src="{% static "images/vatnajokull.jpg" %}"alt="Vatnajokull Glacier." style="width:800px;">
+
+    <h1>Vatnajökull Glacier</h1>
+    <p style="width:800px;text-align:justify;">Vatnajokull glacier (featured above) is not only the biggest glacier
+        in Iceland - it’s the biggest in Europe! This makes Vatnajokull a fantastic glacier to visit with a variety
+        of activities. Svínafellsjökull, located within the Vatnajokull glacier, has been the location for films such
+        as Interstellar and Batman Begins. Visit if you want to see ice caves, glacial lakes and Diamond beach,
+        littered with mini icebergs. The Vatnajokull National Park is open year round and summer is a popular time
+        to hike, though if you want to tour the ice caves, they are generally accessible between November and March.</p>
+
+    <h2>How To Get There</h2>
+    <p style="width:800px;text-align:justify;">This glacier is surrounded by a national park of the same name, Vatnajökull National Park. The easiest way to
+    access it is via Skaftafell, which is also a part of the larger Vatnajökull National Park. From Reykjavik, follow
+    route 1 along the south coast for approximately 320 km, until you see a sign for Skaftafell National Park, where
+        you will make a left turn. The journey will take around 4 hours in favourable conditions.</p>
+
+    <h2>What To Do</h2>
+    <ul>
+        <li>Conquer Öræfajökull</li>
+        <li>Hike Around Vatnajökull Glacier</li>
+        <li>Visit the Fjallsarlon Glacier Lagoon</li>
+    </ul>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1767565.693472407!2d-18.93308096080499!3d64.36504660167317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d1d9c01cfda2db%3A0x8948007619cbf306!2sVatnajokull!5e0!3m2!1sen!2suk!4v1520723835115"
+            width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <aside><div class="fb-like"
+         data-href="http://127.0.0.1:8000/ExploreIceland/vatnajokull/"
+         data-layout="standard"
+         data-action="like" data-size="small"
+         data-show-faces="true"
+                data-share="true"></div></aside>
+
+    <div class="fb-comments"
+         data-href="http://127.0.0.1:8000/ExploreIceland/vatnajokull/"
+         data-numposts="5"></div>
+
+
+{% endblock %}
