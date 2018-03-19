@@ -26,7 +26,8 @@ urlpatterns = [
     url(r'^contact/',views.contact, name='contact'),
     url(r'^attractioncategory/(?P<category_name_slug>[\w\-]+)/$',
         views.show_attractioncategory, name='show_attractioncategory'),
-    
+    url(r'search/', views.search, name='search'),
+    url(r'^goto/$', views.track_url, name='goto'),
     
     url(r'^restricted/', views.restricted, name='restricted'),
    url(r'^base_bootstrap/', views.base_bootstrap, name='base_bootstrap'),
