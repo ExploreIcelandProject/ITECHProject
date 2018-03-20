@@ -1,0 +1,75 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ísafjorður</title>
+</head>
+
+{% block body_block %}
+<!--ADDED-->
+
+
+<!--ADDED-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--END-->
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-7">
+            <img src="https://www.icelandtravel.is/servlet/file/store5085/item865194/version1/IMG_4253.jpg" alt="" width="600" height="300"></img>
+            <h4>Ísafjorður viewed from the surrounding hills.<br><small><i>(Source: IcelandTravel.is)</i></small></h4>
+            <br>
+            <img src="http://www.bolungarvik.is/media/2016/stofnun/Osvor.jpg" alt="Ísafjorður" width="600" height="300"></img>
+            <h4>Ósvör Maritime Museum in the village of Bolungarvik just outside Ísafjorður. The museum is located in the 19th century fishing base.<br><small><i>(Source: Bolungarvik.is)</i></small></h4>
+            <br>
+            
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51725.14519747409!2d-23.21814648282906!3d66.10047966746416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4f2ae03b581c4d6b%3A0x885684d156b309f7!2zw41zYWZqw7Zyw7B1ciwgSWNlbGFuZA!5e0!3m2!1sen!2suk!4v1521124469200" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            
+        </div>
+        <div class="col-sm-5">
+            <h1>Ísafjorður</h1>
+            <p>/EE-sa-fyoer-dooh-r/</p>
+            <h3 style="text-align:justify">Hub of Westfjords adventure tours, and by far the region’s largest town, Ísafjörður is a pleasant and prosperous place and an excellent base for travellers. The town is set on an arcing spit that extends out into Skutulsfjörður, and is hemmed in on all sides by towering peaks and the dark waters of the fjord.</h3>
+            <br>
+            <p style="text-align:justify">The centre of Ísafjörður is a charming grid of old timber and tin-clad buildings, many unchanged since the 18th century, when the harbour was full of tall ships and Norwegian whaling crews. Today it is a surprisingly cosmopolitan place, and after some time spent travelling in the Westfjords, it’ll feel like a bustling metropolis with its tempting cafes and fine choice of restaurants.</p>
+            <p style="text-align:justify">There’s hiking in the hills around the town, skiing in winter, and regular summer boats ferry hikers across to the remote Hornstrandir Peninsula.</p>
+            <br>
+            <h4>Cultural Events</h4>
+            <p style="text-align:justify">The town hosts varied and widely popular events, in the realms of both culture and outdoor recreation. These events include, but are not limited to:
+            <ul style="list-style-type:circle">
+                <li>The Ski Week Festival</li>
+                <li>"Aldrei fór ég suður" Music Festival</li>
+                <li>Fossavatn Ski Marathon</li>
+            </ul>
+            <p>
+            <br>
+            <p>Sources: Lonely Planet, Wikipedia</p>
+            <br>
+            <div class="fb-like" data-href="{% url 'isafjordur' %}" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+            <div class="fb-comments" data-href="{% url 'isafjordur' %}" data-numposts="5"></div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="row">
+    <div class="col-sm-12">
+        <h1>See Similar...</h1>
+        <a href="{% url 'hiking' %}">
+            <img src="{% static "images/hiking.jpg" %}" alt="Hiking" style="width:300px;height:150px;border:0">
+                
+        </a>
+        <a href="{% url 'glacier' %}">
+            <img src="{% static "images/glacier.jpg" %}" alt="Glacier" style="width:300px;height:150px;border:0">
+                
+        </a>
+        
+    </div>
+</div>
+</div>
+<!--END-->
+                    
+{% endblock %}

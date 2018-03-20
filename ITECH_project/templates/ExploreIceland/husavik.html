@@ -1,0 +1,65 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stunning Volcanoes</title>
+</head>
+
+{% block body_block %}
+<!--ADDED-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--END-->
+
+
+<!--ADDED-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-7">
+            <img src="https://icelandunlimited.is/wp-content/uploads/2017/05/whale-watching-husavik.jpg" alt="Whale" width="600" height="300"></img>
+            <h4>Whale Watching in Húsavík.<br><small><i>(Source: IcelandUnlimited.is)</i></small></h4>
+            <br>
+            <img src="http://www.diamondcircle.is/wp-content/uploads/2013/01/%C3%96rjan-Mattsson1.jpg" alt="Harbour" width="600" height="300"></img>
+            <h4>The Húsavík Harbour.<br><small><i>(Source: DiamondCircle.is)</i></small></h4>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12960.689021187169!2d-17.362861829946883!3d66.04273715721415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48cd42159e4b2c3b%3A0x30afb44cc03c202f!2zSMO6c2F2w61rLCBJY2VsYW5k!5e0!3m2!1sen!2suk!4v1521117450827" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            
+        </div>
+        <div class="col-sm-5">
+            <h1>Húsavík</h1>
+            <p>/HOOS-a-vik, -veek/</p>
+            <h3 style="text-align:justify">Húsavík, Iceland’s whale-watching capital, has become a firm favourite on travellers’ itineraries – and with its colourful houses, unique museums and stunning snowcapped peaks across the bay, it's easily the northeast's prettiest fishing town.</h3>
+            <br>
+            <h4>Attractions</h4>
+            <p style="text-align:justify">Húsavík has become a centre of whale watching in Iceland due to whales of different species that frequently enter the bay. The Húsavík Whale Museum is located in the downtown by the harbour.</p>
+            <p style="text-align:justify">In town there is also a civic museum about culture and biology. Among other things, it shows a stuffed polar bear (arrived in Grimsey in 1969) and ancient boats.</p>
+            <p style="text-align:justify">Húsavík is also home to The Exploration Museum, a museum about the history of human exploration. A monument honoring the Apollo astronauts that trained around Húsavík during the 1960s is located outside the museum.</p>
+            <p style="text-align:justify">The region of Mývatn, with its interesting geology and diverse animal life, is nearby. Jökulsárgljúfur National Park with the horseshoe-shaped canyon Ásbyrgi and the waterfalls Dettifoss, Hafragilsfoss and Selfoss is also not far from the town.</p>
+            <br>
+            <p>Sources: Lonely Planet, Wikipedia </p>
+            <br>
+            <div class="fb-like" data-href="{% url 'husavik' %}" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+            <div class="fb-comments" data-href="{% url 'husavik' %}" data-numposts="5"></div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="row">
+    <div class="col-sm-12">
+        <h1>See Similar...</h1>
+        <a href="{% url 'whalecruise' %}">
+            <img src="{% static "images/whalewatching.jpg" %}" alt="Whale Cruise" style="width:300px;height:150px;border:0">
+                
+        </a>
+        <a href="{% url 'waterfall' %}"">
+            <img src="{% static "images/waterfall.jpeg" %}" alt="Waterfall" style="width:300px;height:150px;border:0">
+                
+        </a>
+        
+    </div>
+</div>
+</div>
+<!--END-->
+                    
+{% endblock %}

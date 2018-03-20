@@ -61,7 +61,7 @@
                         <strong>There are no categories present.</strong> {% endif %}
                     </div>
                     
-                    <h2>Most Viewed Pages</h2>
+                    <h2>Most Viewed Articles</h2>
                     <div>
                         {% for page in pages %} <li>
                             <a href="{% url 'goto' %}?page_id={{page.id}}">{{ page.title }}</a>

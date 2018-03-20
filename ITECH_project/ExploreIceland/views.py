@@ -211,6 +211,26 @@ def volcano(request):
     
     return render(request, 'ExploreIceland/volcano.html',)
 
+def akureyri(request):
+    return render(request, 'ExploreIceland/akureyri.html',)
+
+def egilsstadir(request):
+    return render(request, 'ExploreIceland/egilsstadir.html',)
+def husavik(request):
+    return render(request, 'ExploreIceland/husavik.html',)
+def isafjordur(request):
+    return render(request, 'ExploreIceland/isafjordur.html',)
+def reykjavik(request):
+    return render(request, 'ExploreIceland/reykjavik.html',)
+
+def hiking(request):
+    return render(request, 'ExploreIceland/hiking.html',)
+def ski(request):
+    return render(request, 'ExploreIceland/ski.html',)
+def waterfall(request):
+    return render(request, 'ExploreIceland/waterfall.html',)
+
+
 def gallery(request):
     return render(request, 'ExploreIceland/gallery.html',)
 

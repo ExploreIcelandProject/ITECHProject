@@ -1,0 +1,65 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>akureyri</title>
+</head>
+
+{% block body_block %}
+<!--ADDED-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--END-->
+    
+    
+    
+    
+    <!--ADDED-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-7">
+                <img src="https://events.artegis.com/urlhost/artegis/customers/1657/.lwtemplates/layout/default/events_public/10836//Hrisey-Eyjafjordur-MWL0011031-NY.jpg" alt="Eyjafjörður" width="600" height="500"></img>
+                <h4>Hrisey Island, Eyjafjörður Fjord near Akureyri.<br><small><i>(Source: University of Akureyri)</i></small></h4>
+                <br>
+                <img src="https://cdn.pixabay.com/photo/2014/02/17/11/11/iceland-268009_1280.jpg" alt="Blue Cafe" width="600" height="400"></img>
+                <h4>The Blaa Kannan Cafe at the High Street.<br><small><i>(Source: VisitAkureyri.is)</i></small></h4>
+                <br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105204.57023934543!2d-18.27547705849406!3d65.66920996512252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d28f071cb0bfa7%3A0xbdb632798c71fdd1!2sAkureyri%2C+Iceland!5e0!3m2!1sen!2suk!4v1521122292271" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                
+            </div>
+            <div class="col-sm-5">
+                <h1>Akureyri</h1>
+                <p>/AH-koo-rare-ee/</p>
+                <h3 style="text-align:justify">Akureyri stands strong as Iceland’s second city, but a Melbourne, Manchester or Montréal it is not. And how could it be with only 18,000 residents? It’s a wonder the city (which would be a ‘town’ anywhere else) generates this much buzz. Expect cool cafes, quality restaurants, a handful of art galleries and even some late-night bustle – a far cry from other rural Icelandic towns.</h3>
+                <br>
+                <h4>Local Attractions</h4>
+                <p style="text-align:justify">Akureyri nestles at the head of Eyjafjörður, Iceland’s longest (60km) fjord, at the base of snowcapped peaks. In summer flowering gardens belie the location, just a stone’s throw from the Arctic Circle. Lively winter festivals and some of Iceland’s best skiing provide plenty of off-peak (and off-piste) appeal. With its relaxed attitude and extensive food and accommodation choices, it’s the natural base for exploring Eyjafjörður and around, and it's seeing a growing number of cruise ships calling by (passenger numbers can sometimes overwhelm the town).</p>
+                <br>
+                <p>Source: Lonely Planet</p>
+                <br>
+                <div class="fb-like" data-href="{% url 'akureyri' %}" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                <div class="fb-comments" data-href="{% url 'akureyri' %}" data-numposts="5"></div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>See Similar...</h1>
+            <a href="{% url 'husavik' %}">
+                <img src="https://icelandunlimited.is/wp-content/uploads/2017/05/whale-watching-husavik.jpg" alt="Húsavík" style="width:300px;height:150px;border:0">
+                    
+            </a>
+            <a href="{% url 'ski' %}">
+                <img src="{% static "images/ski.jpg" %}" alt="Skiing" style="width:300px;height:150px;border:0">
+                    
+            </a>
+            
+        </div>
+    </div>
+    </div>
+    <!--END-->
+    
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Whale Cruise</title>
+</head>
+
+{% block body_block %}
+<!--ADDED-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--END-->
+    <!--ADDED-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-7">
+                <img src="https://ssl.c.photoshelter.com/img-get2/I0000lRZ1Ms1OdrA/fit=1000x750/g=G000033zka1n1FhA/Egilsstadir-MND-060817-136.jpg" alt="name" width="600" height="300"></img>
+                <h4>A Bird's Eye View of Egilsstaðir with a visible more oceanic temperate climate than in other parts of Iceland.<br><small><i>(Source: Mats Icelandic Image Library)</i></small></h4>
+                <br>
+                <img src="https://www.anothericeland.com/media/wysiwyg/Egilssta_ir.jpg" alt="Red houses" width="600" height="300"></img>
+                <h4>Red Toy Houses in Egilsstaðir.<br><small><i>(Source: AnotherIceland.com)</i></small></h4>
+                <br>
+                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26713.522409694047!2d-14.432397955862756!3d65.2623515826131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48cc04800da89ed3%3A0x95bf416b2c7c7f54!2sEgilssta%C3%B0ir%2C+Iceland!5e0!3m2!1sen!2suk!4v1521127826331" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                
+            </div>
+            <div class="col-sm-5">
+                <h1>Egilsstaðir</h1>
+                <p>/EH-kil-stadir/</p>
+                <h3 style="text-align:justify">Egilsstaðir is a town in east Iceland on the banks of the Lagarfljót river. East Iceland is Iceland's best kept secret. It is an expansive, enchanting region, where you can find all of Iceland's attractive aspects, culture and a flourishing society, endless opportunities for entertainment and outdoor recreation, picturesque nature in all directions and more natural sights than almost anywhere else. </h3>
+                <br>
+                <h4>Vibrant Society</h4>
+                <p style="text-align:justify">Egilsstaðir is a town in east Iceland on the banks of Lagarfljót river. The vicinity that Egilsstaðir is located in is called Fljótsdalshérað and it is home to a progressive, energetic society, in keeping with the special environment of the area. Affected by the inviting surroundings and comfortable climate, the cordiality of locals provides a warm welcome for those arriving in the municipality. There is a large range of busy cultural activities, as well as ambitious work in music, art and drama and varied undertakings by clubs and other organisations. Living museums sponsor special exhibits and an assortment of presentations and entertaining programmes. The numerous cultural festivals held annually in Fljótsdalshérað attract many artists from everywhere in Iceland to participate.</p>
+                <br>
+                <h4>Scenic Nature</h4>
+                <p style="text-align:justify">Famous for its natural beauty and pleasant climate, often resembling that on the Continent, Fljótsdalshérað is particularly characterised by woods, whose appearance in the environment is special for Iceland. The local society, waterfalls, lakes and rivers contribute to the many scenic attractions favourable for outdoor recreation. There are many enjoyable walking routes through forests and open areas, and trips into nearby mountain ranges are popular regardless of the time of year. Not only is the fauna varied, but there are outstanding opportunities for bird-watching, besides the unique chance to view reindeer in Iceland. Lagarfljót lake is inhabited by Iceland's most renowned water monster, Lagarfljótsormur.</p>
+                <br>
+                <p>Sources: VisitEgilsstadir.is, East.is</p>
+                <br>
+                <div class="fb-like" data-href="{% url 'egilsstadir' %}" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                <div class="fb-comments" data-href="{% url 'egilsstadir' %}" data-numposts="5"></div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>See Similar...</h1>
+            <a href="{% url 'hiking' %}">
+                <img src="{% static "images/hiking.jpg" %}" alt="Hiking" style="width:300px;height:150px;border:0">
+                    
+            </a>
+            <a href="{% url 'waterfall' %}">
+                <img src="{% static "images/waterfall.jpeg" %}" alt="Waterfall" style="width:300px;height:150px;border:0">
+                    
+            </a>
+            
+        </div>
+    </div>
+    </div>
+    <!--END-->
+    
+
+{% endblock %}

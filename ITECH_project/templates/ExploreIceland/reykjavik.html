@@ -1,0 +1,69 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vatnajökull Glacier</title>
+</head>
+
+{% block body_block %}
+<!--ADDED-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--END-->
+
+<!--ADDED-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-7">
+            <img src="http://www.reykjavik.com/wp-content/uploads/2015/01/Winter-Reykjavik.jpg" alt="Reykjavík" width="600" height="300"></img>
+            <h4>Reykjavík by night.<br><small><i>(Source: VisitReykjavik.is)</i></small></h4>
+            <br>
+            <img src="https://media-cdn.tripadvisor.com/media/photo-o/09/8d/97/d5/harpa-reykjavik-concert.jpg" alt="Harpa" width="600" height="300"></img>
+            <h4>Harpa Concert Hall.<br><small><i>(Source: TripAdvisor)</i></small></h4>
+            <br>
+            <img src="http://static6.uk.businessinsider.com/image/580681f4dd089579488b48b0/5-reasons-iceland-has-become-one-of-the-hottest-tourist-destinations.jpg" alt="Harbour" width="600" height="300"></img>
+            <h4>The Old Harbour.<br><small><i>(Source: Business Insider UK)</i></small></h4>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55701.205112692!2d-21.922481472717088!3d64.13347354484813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d674b9eedcedc3%3A0xec912ca230d26071!2sReykjav%C3%ADk%2C+Iceland!5e0!3m2!1sen!2sus!4v1520363652574" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            
+        </div>
+        <div class="col-sm-5">
+            <h1>Reykjavík</h1>
+            <p>/RAYK-yə-vik, -veek/</p>
+            <h3 style="text-align:justify">The world’s most northerly capital combines colourful buildings, quirky, creative people, eye-popping design, wild nightlife and a capricious soul.</h3>
+            <br>
+            <h4>Food & Nightlife</h4>
+                <p style="text-align:justify">Reykjavík is strikingly cosmopolitan for its size. It's merely a town by international standards, compared with London or Paris, yet it's loaded with captivating art, rich culinary choices, and cool cafes and bars.The capital has seen a recent surge in restaurant openings, many of the highest standard, and expressing all manner of culinary creativity. Cafes by day turn into restaurants and bars at night. Tapas-style dining, high-concept Icelandic cuisine and burger joints all rub shoulders.Then join the late-night party. The music scene is epic: excellent festivals, creative DJs gigging and any number of home-grown bands.</p>
+                <br>
+                <h4>History</h4>
+                <p style="text-align:justify">You can get a full primer on Icelandic history right in central Reykjavík, from its Settlement Exhibition built around the unearthed Viking longhouse of the area's earliest inhabitants to the enormous National Museum, keeper of the country's most precious artefacts.In the Old Harbour you can enthrall the kids at a high-octane Saga Museum, or learn about the area's maritime history. And, as you make your way around, try to slip behind the shiny tourist-centric veneer to find today's people, who mix aesthetic-minded ingenuity with an almost quaint, know-your-neighbours sense of community.</p>
+                <br>
+                <h4>Art & Design</h4>
+                <p style="text-align:justify">The capital's art museums and galleries are perfect for seeing what the Settlers' modern-day ancestors are up to. You’ll be able to explore exhibition spaces, like the outstanding Reykjavík Art Museum and National Gallery, and shops featuring cutting-edge Icelandic design. Or wrap your head around edgy contemporary art galleries showcasing emerging and internationally famous Icelandic artists.If the moving image is more your style, Reykjavík also presents the chance to see Icelandic cinema with English subtitles. Or, wander the streets photographing creative graffiti and public art installations, like the ever-popular seaside Sun Voyager sculpture, changing guises along with the light.</p>
+                <br>
+                <h4>The Great Outdoors</h4>
+                <p style="text-align:justify">Even if you come to Reykjavík for a short visit, be sure to take a trip to the countryside. Tours and services abound, and understanding Reykjavík and its people is helped by understanding the vast, raw and gorgeous land they anchor. The majority of Icelanders live in the capital, but you can guarantee their spirits also roam free across the land. Absorb what you see, hear, taste, smell – all part of Iceland's rich heritage.Take Reykjavík, then add its snow-topped mountains, churning seas and crystal-clear air, and you will fall helplessly in love, returning home already saving to come back.</p>
+                <p>Source: https://www.lonelyplanet.com/iceland/reykjavik</p>
+                <br>
+                <div class="fb-like" data-href="{% url 'reykjavik' %}" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                <div class="fb-comments" data-href="{% url 'reykjavik' %}" data-numposts="5"></div>
+                </div>
+                </div>
+                </div>
+                <br>
+                <br>
+                <h1>See Similar...</h1>
+                <a href="{% url 'isafjordur' %}">
+                <img src="https://www.icelandtravel.is/servlet/file/store5085/item865194/version1/IMG_4253.jpg" alt="Isafjordur" style="width:300px;height:150px;border:0">
+                
+                </a>
+                <a href="{% url 'eyjafjallajokull' %}">
+                    <img src="{% static "images/Eyjafjallajokull.jpg" %}" alt="Eyjafjallajökull" style="width:300px;height:150px;border:0">
+                        
+                </a>
+        </div>
+    </div>
+</div>
+<!--END-->
+
+{% endblock %}

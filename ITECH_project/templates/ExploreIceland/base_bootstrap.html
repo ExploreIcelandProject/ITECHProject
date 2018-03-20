@@ -38,7 +38,7 @@
                                         <a href="{% url 'northernlights' %}">Northern Light</a>
                                         <a href="{% url 'volcano' %}">Volcano</a>
                                         <a href="{% url 'hotspring' %}">Hot Spring</a>
-                                        <a href="#Waterfallt">Waterfall</a>
+                                        <a href="{% url 'waterfall' %}">Waterfall</a>
                                         <a href="{% url 'glacier' %}">Glacier</a>
                                     </div>
                                 </div>
@@ -48,11 +48,11 @@
                                 <div class="dropdown">
                                     <button class="dropbtn">City</button>
                                     <div class="dropdown-content">
-                                        <a href="{% url 'index' %}">Reykjavík</a>
-                                        <a href="{% url 'index' %}">Keflavík</a>
-                                        <a href="{% url 'index' %}">Akureyri</a>
-                                        <a href="{% url 'index' %}">Egilstaðir</a>
-                                        <a href="{% url 'index' %}">Ísafjörður</a>
+                                        <a href="{% url 'reykjavik' %}">Reykjavík</a>
+                                        <a href="{% url 'husavik' %}">husavik</a>
+                                        <a href="{% url 'akureyri' %}">Akureyri</a>
+                                        <a href="{% url 'egilsstadir' %}">Egilstaðir</a>
+                                        <a href="{% url 'isafjordur' %}">Ísafjörður</a>
                                     </div>
                                 </div>
                             </li>
@@ -61,8 +61,8 @@
                                 <div class="dropdown">
                                     <button class="dropbtn">Activity</button>
                                     <div class="dropdown-content">
-                                        <a href="#Hiking">Hiking</a>
-                                        <a href="#Ski">Ski</a>
+                                        <a href="{% url 'hiking' %}">Hiking</a>
+                                        <a href="{% url 'ski' %}">Ski</a>
                                         <a href="{% url 'icecaveexploring' %}">Ice Cave</a>
                                         <a href="{% url 'whalecruise' %}">Whale Cruise</a>
                                         <a href="{% url 'diving' %}">Diving</a>
