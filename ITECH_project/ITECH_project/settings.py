@@ -28,7 +28,7 @@ SECRET_KEY = 'qih6n=65w(207ec_fs9_&xr=lu$-*x*@*c7$)86g#(9cn#rs+o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://exploreiceland.pythonanywhere.com','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['http://exploreiceland.pythonanywhere.com','127.0.0.1','localhost','exploreiceland.pythonanywhere.com']
 
 
 # Application definition
