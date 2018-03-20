@@ -1,0 +1,53 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jarðböðin við Mývatn</title>
+</head>
+
+{% block body_block %}
+    <img src="{% static "images/myvatnbath.jpg" %}"alt="Jarðböðin við Mývatn." style="width:800px;">
+
+    <h1>Mývatn Geothermal Area</h1>
+    <p style="width:800px;text-align:justify;">Shaped by repeated volcanic eruptions and seismic activity down through the ages, the landscape around the 36.5 km2 lake situated at an altitude of 277 m above sea-level provides a spectacular panorama of surreal lava, crater and cave formations, sulphur-streaked mountains, and sweeping wetlands teeming with plant and birdlife which, in summer, are home to the swarms of midges that not only give the region its name but also provide a major source of nutrition for fish and birds.
+    
+The area is one of the most popular tourist attractions in the country. It offers a variety of accommodation services, restaurants and activities throughout the year. Explore the surroundings on numerous well-marked paths or follow the signs along the National Road guiding you to all major places of interest. Allow yourself to lose track of time while admiring the beauty of the landscape and abundant flora and birdlife. Places not to be missed include Hverfjall, Dimmuborgir, Grjótagjá, Skútustadagígar, Höfdir, Lofthellir, Leirhnjúkur, Krafla and the hot springs east of Námskardur. A total of around 450 people live in the district of Skútustadahreppi with around 200 in the village of Reykjahlid.
+
+The open-air outdoor Mývatn hot springs can also see the surrounding scenery when you soak, such as the blue-green volcanic lake, especially in the morning sun or sunset, beautiful and dreamy. It is surrounded by natural snow-capped mountains and snow in winter. However, many people who have visited think that the temperature of the Mi Lake Hot Springs will be slightly lower, between 35 and 41 degrees. Those who like to get really hot springs must be psychologically prepared.
+</p>
+
+    <h2>How To Get There</h2>
+    <p style="width:800px;text-align:justify;">Located in the heart of north-east Iceland about 105 kilometres (65 miles) south of the Arctic Circle, Lake Mývatn with its unique nature and rich birdlife is one of Europe´s greatest natural treasures.</p>
+
+    <h2>What Highly Recommand To Do</h2>
+    <ul>
+        <li><a href="https://www.myvatnnaturebaths.is/">Myvatn Nature Bath</li>
+        <li><a href="https://www.visitmyvatn.is/">Mývatn Tours</li>
+    </ul>
+    
+    <iframe width="600" height="450" frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJhwNZHwGfzUgR7Y3AMkqZIxA&key=AIzaSyCpQccmsA3QaC-wFNFIvUycmuhR9sA317A" allowfullscreen></iframe>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <aside><div class="fb-like"
+         data-href="http://127.0.0.1:8000/ExploreIceland/myvatnbath/"
+         data-layout="standard"
+         data-action="like" data-size="small"
+         data-show-faces="true"
+                data-share="true"></div></aside>
+
+    <div class="fb-comments"
+         data-href="http://127.0.0.1:8000/ExploreIceland/myvatnbath/"
+         data-numposts="5"></div>
+
+
+{% endblock %}

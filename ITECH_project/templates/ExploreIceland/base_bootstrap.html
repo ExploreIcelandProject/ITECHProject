@@ -35,9 +35,9 @@
                                 <div class="dropdown">
                                     <button class="dropbtn">Attraction</button>
                                     <div class="dropdown-content">
-                                        <a href="#Northern Light">Northern Light</a>
-                                        <a href="#Volcano">Volcano</a>
-                                        <a href="#Hot Sprin">Hot Spring</a>
+                                        <a href="{% url 'northernlights' %}">Northern Light</a>
+                                        <a href="{% url 'volcano' %}">Volcano</a>
+                                        <a href="{% url 'hotspring' %}">Hot Spring</a>
                                         <a href="#Waterfallt">Waterfall</a>
                                         <a href="{% url 'glacier' %}">Glacier</a>
                                     </div>
@@ -65,8 +65,8 @@
                                         <a href="#Ski">Ski</a>
                                         <a href="{% url 'icecaveexploring' %}">Ice Cave</a>
                                         <a href="{% url 'whalecruise' %}">Whale Cruise</a>
-                                        <a href="#Diving">Diving</a>
-                                        <a href="#Horse riding">Horse riding</a>
+                                        <a href="{% url 'diving' %}">Diving</a>
+                                        <a href="{% url 'horseriding' %}">Horse riding</a>
                                     </div>
                                 </div>
                             </li>
@@ -79,6 +79,7 @@
                                         <a href="{% url 'horse' %}">Icelandic horse</a>
                                         <a href="{% url 'puffin' %}">Puffin</a>
                                         <a href="{% url 'reindeer' %}">Reindeer</a>
+                                        
                                     </div>
                                 </div>
                             </li>
@@ -94,6 +95,7 @@
                                 <a class="nav-link" href="{% url 'search' %}">Search</a>
                                 
                             </li>
+                            
                             <li class="nav-item">
                              <fb:login-button autologoutlink="true"></fb:login-button>
                                 
@@ -108,6 +110,12 @@
                 
                 
             </div>
+            
+            
+            
+            
+            
+            
             
             <div id="fb-root"></div>
             <script>(function(d, s, id) {

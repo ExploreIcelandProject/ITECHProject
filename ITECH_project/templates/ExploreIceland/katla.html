@@ -1,0 +1,51 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Katla</title>
+</head>
+
+{% block body_block %}
+    <img src="{% static "images/katla.jpg" %}"alt="Katla." style="width:800px;">
+
+    <h1>Katla</h1>
+    <p style="width:800px;text-align:justify;">With a square area of over 595 kilometers, a caldera of 10 kilometers in diameter, and a peak reaching 1,512 meters, Katla Volcano is one of the largest in Iceland. It is also one of the most actives, having erupted at least 20 times since the year 1100.
+    
+    Katla is a particular volcano in the sense that it is partially hidden beneath the Mýrdalsjökull glacier, with some areas being covered by up to 700 meters of ice. This causes important flooding and mudslides during eruptions, with discharges estimated to 400,000 cubic meters per second (a flow comparable to the planet’s most powerful rivers); the last eruption even added some 5 kilometers to Iceland’s southern coast. Katla is very active; in fact, it has been showing signs of unrest since 1999, which have consistently intensified after the infamous 2010 Eyjafjallajökull eruptions. Geologists have genuine concerns that Katla might erupt in the near future and cause devastating damage on Route 1, Iceland’s main road.
+</p>
+
+    <h2>How To Get There</h2>
+    <p style="width:800px;text-align:justify;">Katla Volcano is situated 50 kilometers to the north of Vík í Mýrdal, just east of Eyjafjallajökull along Route 1. A few tour operators (with departures from both Vik and Reykjavik) take visitors to the foot of the volcano with a super jeep, as well as to a handful of other attractions on the southern coast of Iceland. Hikers should look into the visiting the Thorsmork nature reserve, which offers splendid panoramas of Katla.</p>
+
+    <h2>What Highly Recommand To Do</h2>
+    <ul>
+        <li><a href="http://www.mountainexcursion.is/">Katla Glacier Walk</li>
+        <li><a href="http://www.katlatrack.is/ice-cave/">Katla Ice Cave Tour</li>
+    </ul>
+    
+    <iframe width="600" height="450" frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?q=Katla&key=AIzaSyCpQccmsA3QaC-wFNFIvUycmuhR9sA317A" allowfullscreen></iframe>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <aside><div class="fb-like"
+         data-href="http://127.0.0.1:8000/ExploreIceland/katla/"
+         data-layout="standard"
+         data-action="like" data-size="small"
+         data-show-faces="true"
+                data-share="true"></div></aside>
+
+    <div class="fb-comments"
+         data-href="http://127.0.0.1:8000/ExploreIceland/katla/"
+         data-numposts="5"></div>
+
+
+{% endblock %}

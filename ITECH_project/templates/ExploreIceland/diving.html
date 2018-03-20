@@ -1,0 +1,79 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Snorkeling and Diving</title>
+</head>
+
+{% block body_block %}
+<div style="width:1000px; margin:0 auto;">
+    <img src="{% static "images/diving.jpg" %}"alt="Snorkeling and Diving." style="width:800px;">
+
+    <h1>Snorkeling and Diving</h1>
+    <p style="width:800px;text-align:justify;">
+    Time to take the plunge and experience diving into Silfra’s pristine, crystal clear water. Filtered over decades by Iceland’s volcanic basaltic rock, you can easily take a sip during your dive; you won’t find purer drinking water.
+    
+    During your dive you will explore the four main parts of Silfra. You will float through Big Crack, Silfra’s narrowest section, where you can have your ‘Dive Between the Continents’ photo taken. As the fissure widens you will find yourself in the majestic Silfra Hall with the possibility of local geese and ducks paddling overhead. Near to the opening to Thingvallavatn we will enter the Silfra Cathedral; if there are divers ahead you will see the ‘chandelier effect’ of their rising bubbles. Your dive is finished in the endless visibility of Silfra Lagoon. After this first dive, visitors can make their way back along a challenging but rewarding 250 meter path with dive gear. Don’t hesitate to ask your guide if you need some assistance with your gear.
+    </p>
+    <img src="{% static "images/snorkeling.jpg" %}"alt="Snorkeling and Diving." style="width:800px;">
+        <img src="{% static "images/grass.jpg" %}"alt="Grass in Silfra." style="width:800px;">
+
+    <h2>A Must-Dive Silfra Fissure in Iceland</h2>
+    <img src="{% static "images/fissure.jpg" %}"alt="Silfra Fissure." style="width:800px;">
+    <p style="width:800px;text-align:justify;">The Silfra fissure, is known as one of the top dive sites in the world for two main reasons.
+    
+    Firstly, the Silfra fissure is actually a crack between the North American and Eurasian continents, meaning that you dive or snorkel right where the continental plates meet and drift apart about 2cm per year.
+    
+    Silfra is the only place where one can dive or snorkel directly in the crack between two continental plates.
+    
+    Secondly, the underwater visibility in the Silfra fissure is over 100 meters, which creates an underwater experience that will rarely, if ever, be surpassed. The reasons for this astounding water clarity are twofold: the water is cold (2°C – 4°C year round ) as it is glacial water from the nearby Langjökull and this water is filtered through porous underground lava for 30-100 years until it reaches the north end of Thingvellir lake, seeping out from underground wells. The Silfra water is as pristine as water can get and you can drink it at anytime during your dive or snorkel.
+    
+    The Silfra fissure consists of four sections: Silfra Big Crack, Silfra Hall, Silfra Cathedral, and Silfra Lagoon.  We plan our dives and snorkel swims so that we are able to see all Silfra sections in every Diving Silfra Day Tour and our Silfra Snorkeling Tour.  We enter the water from a platform with steps leading down.  If you are diving, the maximum depth of the your dive in Silfra will be 18 meters, but the average depth of the dive is between 7 and 12 meters.</p>
+
+    <h2>When To Snorkel and Dive</h2>
+    <p style="width:800px;text-align:justify;">The tours in Iceland are usually offered all year round.But it depends on choice of route during different season and weather in Iceland.</p>
+
+    <h2>Recommended Area</h2>
+        <li>Silfra of Golden Circle</li>
+        <iframe width="600" height="450" frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ488RuCCB1kgR5FC8rQbc23Y&key=AIzaSyCpQccmsA3QaC-wFNFIvUycmuhR9sA317A" allowfullscreen></iframe>
+
+        <li>Strýtan of Water Circle</li>
+        <iframe width="600" height="450" frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJDUcWv2eX0kgRsbdUFdoIUQk&key=AIzaSyCpQccmsA3QaC-wFNFIvUycmuhR9sA317A" allowfullscreen></iframe>
+
+    </ul>
+
+    <h2>Recommended Agency</h2>
+        <li>Diveiveland | <a href="http://salkawhalewatching.is/">salkawhalewatching.is</a></li>
+        <li>DIVE.IS | <a href="http://www.whalesafari.is/">www.whalesafari.is</a></li>
+        <li>Strýtan Divecenter | <a href="http://www.strytan.is/">www.strytan.is</a></li>
+    </ul>
+
+
+    <p>credit: <a href="https://www.discover-the-world.co.uk/search?searchword=iceland&searchphrase=all">Discover The World</a></p>
+
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <aside><div class="fb-like"
+         data-href="http://127.0.0.1:8000/ExploreIceland/diving/"
+         data-layout="standard"
+         data-action="like" data-size="small"
+         data-show-faces="true"
+                data-share="true"></div></aside>
+
+    <div class="fb-comments"
+         data-href="http://127.0.0.1:8000/ExploreIceland/diving/"
+         data-numposts="5"></div>
+</div>
+
+{% endblock %}

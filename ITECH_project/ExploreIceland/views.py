@@ -10,9 +10,9 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from datetime import datetime
-from ExploreIceland.webhose_search import run_query
-from django.shortcuts import redirect
 
+from django.shortcuts import redirect
+from ExploreIceland.webhose_search import run_query
 # Create your views here.
 
 def index(request):
@@ -26,7 +26,7 @@ def index(request):
 
 def about(request):
     category_list=attractionCategory.objects.order_by('-likes')
-    page_list = attractionPage.objects.order_by('-views')[:5]
+    page_list = attractionPage.objects.order_by('-views')
     context_dict = {'categories': category_list,'pages': page_list
 }
     return render(request, 'ExploreIceland/about.html',context=context_dict)
@@ -38,6 +38,13 @@ def attraction(request):
     return render(request, 'ExploreIceland/attraction.html', )
 
 def glacier(request):
+    try:
+        page = attractionPage.objects.get(url="glacier")
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
     return render(request, 'ExploreIceland/glacier.html',)
 
 def vatnajokull(request):
@@ -53,6 +60,7 @@ def myrdalsjokull(request):
     return render(request, 'ExploreIceland/myrdalsjokull.html',)
 
 def eyjafjallajokull(request):
+    
     return render(request, 'ExploreIceland/eyjafjallajokull.html',)
 
 def city(request):
@@ -60,39 +68,148 @@ def city(request):
 
 def activity(request):
     return render(request, 'ExploreIceland/activity.html',)
+def diving(request):
+    try:
+        page = attractionPage.objects.get(url="diving")
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
+    return render(request, 'ExploreIceland/diving.html',)
+
+def horseriding(request):
+    try:
+        page = attractionPage.objects.get(url="horseriding")
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
+    return render(request, 'ExploreIceland/horseriding.html',)
 
 def icecaveexploring(request):
+    try:
+        page = attractionPage.objects.get(id=13)
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
     return render(request, 'ExploreIceland/icecaveexploring.html',)
 
 def whalecruise(request):
+    try:
+        page = attractionPage.objects.get(url="whalecruise")
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
     return render(request, 'ExploreIceland/whalecruise.html',)
 
 def wildanimal(request):
     return render(request, 'ExploreIceland/wildanimal.html',)
 
 def whale(request):
+    try:
+        page = attractionPage.objects.get(url="whale")
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
     return render(request, 'ExploreIceland/whale.html',)
 
 def seal(request):
+    try:
+        page = attractionPage.objects.get(url="seal")
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
     return render(request, 'ExploreIceland/seal.html',)
 
 def horse(request):
+    
+    try:
+        page = attractionPage.objects.get(url="horse")
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
     return render(request, 'ExploreIceland/horse.html',)
 
 def puffin(request):
+    try:
+        page = attractionPage.objects.get(url="puffin")
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
     return render(request, 'ExploreIceland/puffin.html',)
 
 def reindeer(request):
+    try:
+        page = attractionPage.objects.get(url="reindeer")
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
     
-    if(attractionPage.objects.count()<=0):
-        x=attractionPage.objects.create()
-        x.save()
-    else:
-        x=attractionPage.objects.all()[0]
-        x.views=x.views+1
-        x.save()
-    context={'page':x.views}
-    return render(request, 'ExploreIceland/reindeer.html',context=context)
+    return render(request, 'ExploreIceland/reindeer.html',)
+
+def bluelagoon(request):
+    return render(request, 'ExploreIceland/bluelagoon.html',)
+def hotspring(request):
+    try:
+        page = attractionPage.objects.get(url="hotspring")
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
+
+    return render(request, 'ExploreIceland/hotspring.html',)
+def myvatnbath(request):
+    return render(request, 'ExploreIceland/myvatnbath.html',)
+
+def goldencircle(request):
+    return render(request, 'ExploreIceland/goldencircle.html',)
+def kirkjufell(request):
+    return render(request, 'ExploreIceland/kirkjufell.html',)
+def northernlights(request):
+    try:
+        page = attractionPage.objects.get(url="northernlights")
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
+    return render(request, 'ExploreIceland/northernlights.html',)
+def reynisfjara(request):
+    return render(request, 'ExploreIceland/reynisfjara.html',)
+
+def bardarbunga(request):
+    return render(request, 'ExploreIceland/bardarbunga.html',)
+def katla(request):
+    return render(request, 'ExploreIceland/katla.html',)
+def maelifell(request):
+    return render(request, 'ExploreIceland/maelifell.html',)
+def volcano(request):
+    try:
+        page = attractionPage.objects.get(url="volcano")
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
+    
+    return render(request, 'ExploreIceland/volcano.html',)
 
 def gallery(request):
     return render(request, 'ExploreIceland/gallery.html',)
@@ -112,6 +229,17 @@ def show_attractioncategory(request, category_name_slug):
     except attractionCategory.DoesNotExist:
         context_dict['category'] = None
         context_dict['pages'] = None
+
+    context_dict['query'] = category.name
+    result_list = []
+    if request.method == 'POST':
+        query = request.POST['query'].strip()
+        if query:
+#            Run our search API function to get the results list!
+            result_list = run_query(query)
+            context_dict['query'] = query
+            context_dict['result_list'] = result_list
+    # Go render the response and return it to the client.
     
     return render(request, 'ExploreIceland/attractioncategory.html', context_dict)
 
@@ -176,8 +304,7 @@ def track_url(request):
             page_id = request.GET['page_id']
             try:
                 page = attractionPage.objects.get(id=page_id)
-                page.views = page.views + 1
-                page.save()
+               
                 url = page.url
             except:
                 pass

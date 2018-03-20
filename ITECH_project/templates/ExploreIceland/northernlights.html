@@ -1,0 +1,56 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+{% block body_block %}
+    <img src="{% static "images/northernlights.jpg" %}"alt="Northen Lights Cover." style="width:800px;">
+
+    <h1>Northern Lights in Iceland</h1>
+    <p style="width:1000px;text-align:justify;">
+    Northern Lights (or Aurora Borealis) is one of Iceland's most famous sightseeings. This is the "luminescence phenomenon caused by the collision of charged high-energy particles with atoms in the upper atmosphere".
+    The most common northern lights are green (ie. on the contrary, the Antarctic light pink/orange), unless the aurora activity is very strong, the lights index is very high, just like the northern lights of Iceland in previous years, when there is a big outbreak, only to have the opportunity to see the red , purple, and blue colors. The shape of the aurora is very beautiful, much like a girl dancing in the air with her long sleeves. As for the name Aurora, the alias for Aurora is given by the legendary scientist Galileo. The name Aurora is the name of the goddess of the Twilight in ancient Roman mythology. Due to Galileo's immense influence, most Westerners also follow Galileo, calling Aurora the goddess.
+    In Iceland it is more likely to meet than other Nordic and North American countries. Iceland's aurora is various colorations and diverse shapes, its light glitters with bright white, yellow, emerald green, violet purple,and peach pink, dancing from Autumn to Winter.
+    In general, from the end of August each year until April of the following year, there is a chance to see the aurora in Iceland. However, the most active months of Iceland’s aurora are from late September to March, and there are exceptions. Just as in 2017, the strong aurora was seen in Iceland in mid-August, but not every year. Fortunately, in August, you can see Aurora in Iceland.
+    Let's deep into the Northern Lights in Iceland and appreciate the beauty that you must experience in your life to be happy forever and ever.</p>
+
+
+    <h3>Top 3 Northern Lights in Iceland</h3>
+    Seeing this wonderful natural phenomenon in person will be one of the most awe-inspiring things you ever witness. The lights are best admired in the remote places away from city lights. The best time to catch them is from mid-September to mid-April. However, it’s a crapshoot! The longer you stay the north, the better your chances!
+
+    <h4><a href="http://127.0.0.1:8000/ExploreIceland/kirkjufell/">1. Reykjavik Kirkjufell</a></h4>
+    <img src="{% static "images/kirkjufell.jpg" %}"alt="Kirkjufell." style="width:800px;">
+
+    <h4><a href="http://127.0.0.1:8000/ExploreIceland/goldencircle/">2. Golden Circle</a></h4>
+    <img src="{% static "images/goldencircle.jpg" %}"alt="Golden Circle." style="width:800px;">
+
+    <h4><a href="http://127.0.0.1:8000/ExploreIceland/reynisfjara/">3.Rreynisfjara Beach</a></h4>
+    <img src="{% static "images/reynisfjara.jpg" %}"alt="Rreynisfjara Beach." style="width:800px;">
+
+    <p>credit:<a href="https://www.iexplore.com/">https://www.iexplore.com/</a></p>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="fb-like"
+         data-href="http://127.0.0.1:8000/ExploreIceland/northernlights/"
+         data-layout="standard"
+         data-action="like" data-size="small"
+         data-show-faces="true"
+         data-share="true"></div>
+
+    <div class="fb-comments"
+         data-href="http://127.0.0.1:8000/ExploreIceland/northernlights/"
+         data-numposts="5"></div>
+
+
+{% endblock %}

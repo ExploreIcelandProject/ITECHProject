@@ -1,0 +1,50 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Golden Circle</title>
+</head>
+
+{% block body_block %}
+    <img src="{% static "images/goldencircle.jpg" %}"alt="Golden Circle." style="width:800px;">
+
+    <h1>Northern Lights in Thingvellir</h1>
+    <p style="width:800px;text-align:justify;">The sights of the Golden Circle are not far from Reykjavík and are located northeast of Reykjavík in the Icelandic capital. Driving from Reykjavík to the Thingvellir National Park takes only approximately 40 minutes drive. Tourists are able to easily appreciate the northern lights due to lack of light damages. </p>
+
+    <h2>How To Get There</h2>
+    <p style="width:800px;text-align:justify;">Driving from Reykjavík to the Hingvellir National Park takes only approximately 40 minutes drive. Continuely climbing the Haukadalur Valley for an hour will discover must-see natural sights- Geysir, Strokkur Geysers and Gullfoss Waterfall.</p>
+
+    <h2>What Highly Recommand To Do</h2>
+    <ul>
+        <li><a href="http://www.thingvellir.is">Thingvellir National Park</a></li>
+        <li><a href="https://www.dive.is/">Silfra Diving and Snorkeling</a></li>
+        <li>Geysers and Gullfoss Visiting</li>
+        <li>Hot Springs in Geysir</li>
+        <li><a href="https://snowmobile.is/">Snowmobiling</a></li>
+    </ul>
+    
+    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJe2kT-x-B1kgR8mKSB4tsdWs&key=AIzaSyCpQccmsA3QaC-wFNFIvUycmuhR9sA317A" allowfullscreen></iframe>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <aside><div class="fb-like"
+         data-href="http://127.0.0.1:8000/ExploreIceland/goldencircle/"
+         data-layout="standard"
+         data-action="like" data-size="small"
+         data-show-faces="true"
+                data-share="true"></div></aside>
+
+    <div class="fb-comments"
+         data-href="http://127.0.0.1:8000/ExploreIceland/goldencircle/"
+         data-numposts="5"></div>
+
+
+{% endblock %}

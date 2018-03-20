@@ -1,0 +1,47 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reynisfjara Beach</title>
+</head>
+
+{% block body_block %}
+    <img src="{% static "images/reynisfjara.jpg" %}"alt="Reynisfjara Beach." style="width:800px;">
+
+    <h1>Northern Lights at Reynisfjara Beach</h1>
+    <p style="width:800px;text-align:justify;">A pure black sandy beach, one of the most famous attractions - Basalt Rocks in the Reynisfjall Mountains and Reynisdrangar Rocks in the middle of the sea. There are many black beaches in Iceland, but the black sandy beach of Reynisfjara is one of the most famous. The northern lights are plianly visible at Reynisfjara Beach. According to hearsay from residents, the northern lights usually appear and streak accross the sky from Dyrhólaey lighthouse to basalt mountains during the midnight. So, they suggest that visitors could book adjacent cabins earlier, otherwise it is difficult to witness northern lights.</p>
+
+    <h2>How To Get There</h2>
+    <p style="width:800px;text-align:justify;">The distance from the city to the Reynisfjara Beach takes approximately two and a half hours drive, keep driving Vesturlandsvegur/ Path 49 and following Þjóðvegur 1 and Þjóðvegur to Reðishverfisvegur in Suðurland, then turn right at Reynishverfisvegur and go straight. In addition, Reynisfjara Beach is just a 10-minute drive from Vik. Getting there toward north on Reynishverfisvegur, and after 5.7 km turn right at Þjóðvegur to reach it.</p>
+
+    <h2>What Highly Recommand To Do</h2>
+    <ul>
+        <li><a href="https://www.south.is/">Hálsanefshellir Cave</a></li>
+        <li>Puffins watching</li>
+    </ul>
+
+    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJvaJDdjBI10gRkLWgMXnFq5w&key=AIzaSyCpQccmsA3QaC-wFNFIvUycmuhR9sA317A" allowfullscreen></iframe>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <aside><div class="fb-like"
+         data-href="http://127.0.0.1:8000/ExploreIceland/reynisfjara/"
+         data-layout="standard"
+         data-action="like" data-size="small"
+         data-show-faces="true"
+                data-share="true"></div></aside>
+
+    <div class="fb-comments"
+         data-href="http://127.0.0.1:8000/ExploreIceland/reynisfjara/"
+         data-numposts="5"></div>
+
+
+{% endblock %}
