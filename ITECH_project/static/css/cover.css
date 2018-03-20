@@ -48,7 +48,7 @@ body {
 
 body {
     /* The image used */
-    background-image: url('index.jpg');
+    background-image: url({% static "images/cover.jpg" %});
     
     /* Full height */
     height: 100%;

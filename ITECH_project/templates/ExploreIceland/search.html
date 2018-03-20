@@ -9,23 +9,24 @@
 </head>
 
 {% block body_block %}
-<h2>Search Explore Iceland</h2>
+<div style="width:1000px; margin:0 auto;">
+<h2>Search Explore Iceland Article</h2>
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
 <ul id="myUL">
-	<li><a href="{% url 'index' %}">Akureyri</a></li>
-	<li><a href="{% url 'index' %}">Egilstaðir</a></li>
-	<li><a href="{% url 'index' %}">Ísafjörður</a></li>
-	<li><a href="{% url 'index' %}">Keflavík</a></li>
-	<li><a href="{% url 'index' %}">Reykjavík</a></li>
+	<li><a href="{% url 'akureyri' %}">Akureyri</a></li>
+	<li><a href="{% url 'egilsstadir' %}">Egilstaðir</a></li>
+	<li><a href="{% url 'isafjordur' %}">Ísafjörður</a></li>
+	<li><a href="{% url 'akureyri' %}">Akureyri</a></li>
+	<li><a href="{% url 'reykjavik' %}">Reykjavík</a></li>
 
 
 	<li><a href="{% url 'diving' %}">Diving</a></li>
-	<li><a href="{% url 'index' %}">Hiking</a></li>
+	<li><a href="{% url 'hiking' %}">Hiking</a></li>
 	<li><a href="{% url 'horseriding' %}">Horse riding</a></li>
 	<li><a href="{% url 'icecaveexploring' %}">Ice Cave Exploring</a></li>
-	<li><a href="{% url 'index' %}">Ski</a></li>
+	<li><a href="{% url 'ski' %}">Ski</a></li>
 	<li><a href="{% url 'whalecruise' %}">Whale Cruise</a></li>
 
 	<li><a href="{% url 'horse' %}">Horse</a></li>
@@ -38,7 +39,7 @@
 	<li><a href="{% url 'hotspring' %}">Hot Spring</a></li>
 	<li><a href="{% url 'northernlights' %}">Northern light</a></li>
 	<li><a href="{% url 'volcano' %}">Volcano</a></li>
-	<li><a href="{% url 'index' %}">Waterfall</a></li>
+	<li><a href="{% url 'waterfall' %}">Waterfall</a></li>
 
 	<!--Inside Gracier-->
 	<li><a href="{% url 'vatnajokull' %}">Vatnajökull Glacier</a></li>
@@ -81,6 +82,6 @@ function myFunction() {
     }
 }
 </script>
-
+</div>
 </body>
 {% endblock %}
