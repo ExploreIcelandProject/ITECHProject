@@ -21,7 +21,7 @@ class attractionCategory(models.Model):
 
 
 class attractionPage(models.Model):
-    category = models.ForeignKey(attractionCategory)
+    category = models.ForeignKey(attractionCategory,on_delete=models.DO_NOTHING)
     title = models.CharField(max_length=128)
     url = models.URLField()
     views = models.IntegerField(default=0)
