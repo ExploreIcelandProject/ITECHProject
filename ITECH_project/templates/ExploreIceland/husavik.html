@@ -3,23 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Stunning Volcanoes</title>
+        <title>Seal</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 {% block body_block %}
-<!--ADDED-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!--END-->
-
-
-<!--ADDED-->
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-6">
-            <img src="https://icelandunlimited.is/wp-content/uploads/2017/05/whale-watching-husavik.jpg" alt="Whale" width="600" height="300"></img>
+            <img src="{% static "images/husavikwhale.jpg" %}" alt="Whale" width="600" height="300"></img>
             <h4>Whale Watching in Húsavík.<br><small><i>(Source: IcelandUnlimited.is)</i></small></h4>
             <br>
-            <img src="http://www.diamondcircle.is/wp-content/uploads/2013/01/%C3%96rjan-Mattsson1.jpg" alt="Harbour" width="600" height="300"></img>
+            <img src="{% static "images/husavikharbour.jpg" %}" alt="Harbour" width="600" height="300"></img>
             <h4>The Húsavík Harbour.<br><small><i>(Source: DiamondCircle.is)</i></small></h4>
             <br>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12960.689021187169!2d-17.362861829946883!3d66.04273715721415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48cd42159e4b2c3b%3A0x30afb44cc03c202f!2zSMO6c2F2w61rLCBJY2VsYW5k!5e0!3m2!1sen!2suk!4v1521117450827" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -38,28 +33,18 @@
             <br>
             <p>Sources: Lonely Planet, Wikipedia </p>
             <br>
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+                     var js, fjs = d.getElementsByTagName(s)[0];
+                     if (d.getElementById(id)) return;
+                     js = d.createElement(s); js.id = id;
+                     js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+                     fjs.parentNode.insertBefore(js, fjs);
+                     }(document, 'script', 'facebook-jssdk'));</script>
             <div class="fb-like" data-href="http://127.0.0.1:8000/ExploreIceland/city/husavik/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
             <div class="fb-comments" data-href="http://127.0.0.1:8000/ExploreIceland/city/husavik/" data-numposts="5"></div>
         </div>
     </div>
 </div>
-<br>
-<br>
-<div class="row">
-    <div class="col-sm-12">
-        <h1>See Similar...</h1>
-        <a href="{% url 'whalecruise' %}">
-            <img src="{% static "images/whalewatching.jpg" %}" alt="Whale Cruise" style="width:300px;height:150px;border:0">
-                
-        </a>
-        <a href="{% url 'waterfall' %}"">
-            <img src="{% static "images/waterfall.jpeg" %}" alt="Waterfall" style="width:300px;height:150px;border:0">
-                
-        </a>
-        
-    </div>
 </div>
-</div>
-<!--END-->
-                    
 {% endblock %}

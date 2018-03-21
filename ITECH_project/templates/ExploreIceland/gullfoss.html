@@ -1,0 +1,40 @@
+{% extends 'ExploreIceland/base_bootstrap.html' %}
+{% load staticfiles %}
+
+<head>
+    <meta charset="UTF-8">
+        <title>Seal</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+{% block body_block %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+            <img src="{% static "images/gullfoss.jpg" %}" alt="Gullfoss" width="600" height="300"></img>
+            <h4><small><i>(Source: GuideToIceland.is)</i></small></h4>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1728.5456742220854!2d-20.122601783920086!3d64.32669610775459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d6a574af45b6c9%3A0x2c6347db0b411601!2sGullfoss+Falls!5e0!3m2!1sen!2spl!4v1521594350070" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+            
+        </div>
+        <div class="col-sm-5">
+            <h1>Gullfoss Falls</h1>
+            <p style="text-align:justify">Gullfoss waterfall literally means ‘Golden waterfall’ and by many is considered Iceland’s most beautiful waterfall. It is the most known waterfall in Iceland since it is close to Reykjavík and the Golden Circle draws its name from this waterfall, seeing as it is one of its pit stops along with Geysir and Þingvellir.</p>
+            <h4>How to get there</h4>
+            <p style="text-align:justify">It is situated in the southwest part of Iceland and is only about a 2-hour drive from Reykjavík, by road number 35.</p>
+            <p><small>Source: GuideToIceland.is<small></p>
+                <br>
+                <div id="fb-root"></div>
+                <script>(function(d, s, id) {
+                         var js, fjs = d.getElementsByTagName(s)[0];
+                         if (d.getElementById(id)) return;
+                         js = d.createElement(s); js.id = id;
+                         js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+                         fjs.parentNode.insertBefore(js, fjs);
+                         }(document, 'script', 'facebook-jssdk'));</script>
+                <div class="fb-like" data-href="http://127.0.0.1:8000/ExploreIceland/waterfalls/gullfoss/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                <div class="fb-comments" data-href="http://127.0.0.1:8000/ExploreIceland/waterfalls/gullfoss/" data-numposts="5"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -3,22 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Vatnajökull Glacier</title>
+        <title>Seal</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 {% block body_block %}
-<!--ADDED-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!--END-->
-
-<!--ADDED-->
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-6">
-            <img src="http://www.reykjavik.com/wp-content/uploads/2015/01/Winter-Reykjavik.jpg" alt="Reykjavík" width="600" height="300"></img>
+            <img src="{% static "images/winterreykjavik.jpg" %}" alt="Reykjavík" width="600" height="300"></img>
             <h4>Reykjavík by night.<br><small><i>(Source: VisitReykjavik.is)</i></small></h4>
             <br>
-            <img src="https://media-cdn.tripadvisor.com/media/photo-o/09/8d/97/d5/harpa-reykjavik-concert.jpg" alt="Harpa" width="600" height="300"></img>
+            <img src="{% static "images/harpareykjavik.jpg" %}" alt="Harpa" width="600" height="300"></img>
             <h4>Harpa Concert Hall.<br><small><i>(Source: TripAdvisor)</i></small></h4>
             <br>
             <img src="http://static6.uk.businessinsider.com/image/580681f4dd089579488b48b0/5-reasons-iceland-has-become-one-of-the-hottest-tourist-destinations.jpg" alt="Harbour" width="600" height="300"></img>
@@ -45,25 +41,19 @@
                 <p style="text-align:justify">Even if you come to Reykjavík for a short visit, be sure to take a trip to the countryside. Tours and services abound, and understanding Reykjavík and its people is helped by understanding the vast, raw and gorgeous land they anchor. The majority of Icelanders live in the capital, but you can guarantee their spirits also roam free across the land. Absorb what you see, hear, taste, smell – all part of Iceland's rich heritage.Take Reykjavík, then add its snow-topped mountains, churning seas and crystal-clear air, and you will fall helplessly in love, returning home already saving to come back.</p>
                 <p>Source: https://www.lonelyplanet.com/iceland/reykjavik</p>
                 <br>
-                <div class="fb-like" data-href="http://127.0.0.1:8000/ExploreIceland/city/reykjavik/"  data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                <div id="fb-root"></div>
+                <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+                fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+                <div class="fb-like" data-href="http://127.0.0.1:8000/ExploreIceland/city/reykjavik/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                 <div class="fb-comments" data-href="http://127.0.0.1:8000/ExploreIceland/city/reykjavik/" data-numposts="5"></div>
-                </div>
-                </div>
-                </div>
-                <br>
-                <br>
-                <h1>See Similar...</h1>
-                <a href="{% url 'isafjordur' %}">
-                <img src="https://www.icelandtravel.is/servlet/file/store5085/item865194/version1/IMG_4253.jpg" alt="Isafjordur" style="width:300px;height:150px;border:0">
-                
-                </a>
-                <a href="{% url 'eyjafjallajokull' %}">
-                    <img src="{% static "images/Eyjafjallajokull.jpg" %}" alt="Eyjafjallajökull" style="width:300px;height:150px;border:0">
-                        
-                </a>
         </div>
     </div>
 </div>
-<!--END-->
-
+</div>
 {% endblock %}
+

@@ -3,54 +3,48 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Seal</title>
+        <title>Seal</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 {% block body_block %}
-<div style="width:1000px; margin:0 auto;">
-    <img src="{% static "images/seal.jpg" %}"alt="Happy seals." style="width:1000px;">
-    <h1>Icelandic Seal</h1>
-        <p style="width:800px;text-align:justify;">Seals have used Iceland’s shores as a place to haul out, breed and shed for millenniums.
-        It’s cold fertile waters, and long stretches of rocky, uninhabited coast,
-        allowed large colonies to evolve before humans ever set foot here.</p>
+<h1>Glaciers in Iceland</h1>
+<h3 style="text-align:justify">It has been said before that when it comes to water, Iceland has an abundance of it – in all forms. Be it in swimming pools, hot springs, geysers, lakes, glaciers, rivers or waterfalls, Iceland is bursting at the seams. The waterfalls in Iceland are countless. Every year, new ones form from melting glaciers and almost every river has a few.</h3>
+<br>
+<h3>Popular Waterfalls in Iceland</h3>
 
-    <h3>The best places to see seals in Iceland</h3>
-    <ul>
-        <li>Jökulsárlón glacial lagoon</li>
-        <li>Vatnsnes Peninsula</li>
-        <li>Icelandic Seal Centre in Hvammstangi</li>
-        <li>Húsey-Úthérað sandy coast</li>
-        <li>Snæfellsnes Peninsula</li>
-    </ul>
-
-    <h3>When is a good time to see seals in Iceland?</h3>
-    <p style="width:800px;text-align:justify;">First, go check out this page and find out when it’s low tide. Then, for your best chance to see the seals,
-        go to your preferred spot between two hours before, and two hours after low tide. You have a better chance
-        if the weather is nice because then they´ll be hanging out, lying around and relaxing.</p>
-
-    <h2>Where is the best place to see seal?</h2>
-
-    <p>credit:<a href="https://www.travelreykjavik.com/">www.travelreykjavik.com</a></p>
-    https://www.travelreykjavik.com/blog/the-best-places-to-go-seal-watching-around-iceland
-
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
-        fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-
-    <div class="fb-like"
-         data-href="http://127.0.0.1:8000/ExploreIceland/seal/"
-         data-layout="standard"
-         data-action="like" data-size="small"
-         data-show-faces="true"
-         data-share="true"></div>
-
-    <div class="fb-comments"
-         data-href="http://127.0.0.1:8000/ExploreIceland/seal/"
-         data-numposts="5"></div>
-</div>
-{% endblock %}
+<h4><a href="{% url 'dettifoss' %}">1. Dettifoss Falls</a></h4>
+<img src="{% static "images/dettifoss.jpg" %}"alt="Dettifoss" style="width:1000px;">
+    
+    <h4><a href="{% url 'skogafoss' %}">2. Skogafoss Falls</a></h4>
+    <img src="{% static "images/skogafoss.jpg" %}"alt="Skogafoss" style="width:1000px;">
+        
+        <h4><a href="{% url 'gullfoss' %}">3. Gullfoss Falls</a></h4>
+        <img src="{% static "images/gullfoss.jpg" %}"alt="Gullfoss" style="width:1000px;">
+            
+            <h4><a href="{% url 'seljalandsfoss' %}">4. Seljalandsfoss Falls</a></h4>
+            <img src="{% static "images/seljalandsfoss.jpg" %}"alt="Seljalandsfoss" style="width:1000px;">
+                
+                <h4><a href="{% url 'dyjandi' %}">5. Dynjandi Falls</a></h4>
+                <img src="{% static "images/dynjandi.jpg" %}"alt="Dynjandi" style="width:1000px;">
+                    <p>Source: GuideToIceland.is</p>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div id="fb-root"></div>
+                            <script>(function(d, s, id) {
+                                     var js, fjs = d.getElementsByTagName(s)[0];
+                                     if (d.getElementById(id)) return;
+                                     js = d.createElement(s); js.id = id;
+                                     js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+                                     fjs.parentNode.insertBefore(js, fjs);
+                                     }(document, 'script', 'facebook-jssdk'));</script>
+                            <div class="fb-like" data-href="http://127.0.0.1:8000/ExploreIceland/waterfalls/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                            <div class="fb-comments" data-href="http://127.0.0.1:8000/ExploreIceland/waterfalls/" data-numposts="5"></div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    {% endblock %}

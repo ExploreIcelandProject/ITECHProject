@@ -3,25 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Ísafjorður</title>
+        <title>Seal</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 {% block body_block %}
-<!--ADDED-->
-
-
-<!--ADDED-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!--END-->
-
-
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-6">
-            <img src="https://www.icelandtravel.is/servlet/file/store5085/item865194/version1/IMG_4253.jpg" alt="" width="600" height="300"></img>
+            <img src="{% static "images/isafjordur.jpg" %}" alt="Isafjordur" width="600" height="300"></img>
             <h4>Ísafjorður viewed from the surrounding hills.<br><small><i>(Source: IcelandTravel.is)</i></small></h4>
             <br>
-            <img src="http://www.bolungarvik.is/media/2016/stofnun/Osvor.jpg" alt="Ísafjorður" width="600" height="300"></img>
+            <img src="{% static "images/osvormuseum.jpg" %}" alt="Ísafjorður" width="600" height="300"></img>
             <h4>Ósvör Maritime Museum in the village of Bolungarvik just outside Ísafjorður. The museum is located in the 19th century fishing base.<br><small><i>(Source: Bolungarvik.is)</i></small></h4>
             <br>
             
@@ -48,28 +41,18 @@
             <br>
             <p>Sources: Lonely Planet, Wikipedia</p>
             <br>
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+                     var js, fjs = d.getElementsByTagName(s)[0];
+                     if (d.getElementById(id)) return;
+                     js = d.createElement(s); js.id = id;
+                     js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+                     fjs.parentNode.insertBefore(js, fjs);
+                     }(document, 'script', 'facebook-jssdk'));</script>
             <div class="fb-like" data-href="http://127.0.0.1:8000/ExploreIceland/city/isafjordur/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
             <div class="fb-comments" data-href="http://127.0.0.1:8000/ExploreIceland/city/isafjordur/" data-numposts="5"></div>
         </div>
     </div>
 </div>
-<br>
-<br>
-<div class="row">
-    <div class="col-sm-12">
-        <h1>See Similar...</h1>
-        <a href="{% url 'hiking' %}">
-            <img src="{% static "images/hiking.jpg" %}" alt="Hiking" style="width:300px;height:150px;border:0">
-                
-        </a>
-        <a href="{% url 'glacier' %}">
-            <img src="{% static "images/glacier.jpg" %}" alt="Glacier" style="width:300px;height:150px;border:0">
-                
-        </a>
-        
-    </div>
 </div>
-</div>
-<!--END-->
-                    
 {% endblock %}

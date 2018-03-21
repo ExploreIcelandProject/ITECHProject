@@ -212,23 +212,98 @@ def volcano(request):
     return render(request, 'ExploreIceland/volcano.html',)
 
 def akureyri(request):
+    try:
+        page = attractionPage.objects.get(url="akureyri")
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
+
     return render(request, 'ExploreIceland/akureyri.html',)
 
 def egilsstadir(request):
+    try:
+        page = attractionPage.objects.get(url="egilsstadir")
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
     return render(request, 'ExploreIceland/egilsstadir.html',)
 def husavik(request):
+    try:
+        page = attractionPage.objects.get(url="husavik")
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
     return render(request, 'ExploreIceland/husavik.html',)
 def isafjordur(request):
+    try:
+        page = attractionPage.objects.get(url="isafjordur")
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
     return render(request, 'ExploreIceland/isafjordur.html',)
 def reykjavik(request):
+    try:
+        page = attractionPage.objects.get(url="reykjavik")
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
+    
     return render(request, 'ExploreIceland/reykjavik.html',)
 
 def hiking(request):
+    try:
+        page = attractionPage.objects.get(url="hiking")
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
+
     return render(request, 'ExploreIceland/hiking.html',)
 def ski(request):
+    try:
+        page = attractionPage.objects.get(url="ski")
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
+
     return render(request, 'ExploreIceland/ski.html',)
 def waterfall(request):
+    try:
+        page = attractionPage.objects.get(url="waterfall")
+        page.views = page.views + 1
+        page.save()
+        url = page.url
+    except:
+        pass
+
+    
     return render(request, 'ExploreIceland/waterfall.html',)
+
+def dettifoss(request):
+    return render(request, 'ExploreIceland/dettifoss.html',)
+def dyjandi(request):
+    return render(request, 'ExploreIceland/dyjandi.html',)
+def gullfoss(request):
+    return render(request, 'ExploreIceland/gullfoss.html',)
+def seljalandsfoss(request):
+    return render(request, 'ExploreIceland/seljalandsfoss.html',)
+def skogafoss(request):
+    return render(request, 'ExploreIceland/skogafoss.html',)
+
+
 
 
 def gallery(request):
