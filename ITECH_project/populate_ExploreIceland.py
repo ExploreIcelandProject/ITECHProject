@@ -58,7 +58,7 @@ def populate():
     cats = {"Attraction": {"pages": attraction_pages,"views":100,"likes":100},
             "City": {"pages": city_pages,"views":100,"likes":100},
             "Activity": {"pages": activity_pages,"views":100,"likes":100},
-            "Wildanimal": {"pages": wildanimal_pages,"views":100,"likes":100}
+            "Wild animal": {"pages": wildanimal_pages,"views":100,"likes":100}
 }
 
     for cat, cat_data in cats.items():
