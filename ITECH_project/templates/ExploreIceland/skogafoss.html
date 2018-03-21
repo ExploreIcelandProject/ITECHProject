@@ -3,29 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-        <title>Seal</title>
+        <title>Skogafoss Falls</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 {% block body_block %}
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-6">
-            <img src="{% static "images/skogafoss.jpg" %}" alt="Skogafoss" width="600" height="300"></img>
-            <h4><small><i>(Source: European Waterfalls)</i></small></h4>
-            <br>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1778.252800345107!2d-19.513565033952798!3d63.5320147242314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d73b7639a58c15%3A0xf60c71fcdfe7948!2sSk%C3%B3gafoss!5e0!3m2!1sen!2spl!4v1521597153192" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-            
-        </div>
-        <div class="col-sm-5">
+
+
             <h1>Skogafoss Falls</h1>
-            <p style="text-align:justify">Skógafoss is one of the biggest waterfalls in Iceland, with a drop of 60 meters and a width of 25 meters, and you can walk right up to, but be prepared to be drenched. It is just overwhelming standing next to it.</p>
-            <p style="text-align:justify">Seeing that it produces a lot of drizzle then you will be able to see beautiful rainbows on sunny days.</p>
+            <p style="width:1000px;text-align:justify;">Skógafoss is one of the biggest waterfalls in Iceland, with a drop of 60 meters and a width of 25 meters, and you can walk right up to, but be prepared to be drenched. It is just overwhelming standing next to it.</p>
+            <p style="width:1000px;text-align:justify;">Seeing that it produces a lot of drizzle then you will be able to see beautiful rainbows on sunny days.</p>
             <h4>How to get there</h4>
-            <p style="text-align:justify">Skógafoss waterfall is a prominent waterfall by route 1 and marks the beginning of Fimmvörðuháls hike over to Þórsmörk. This waterfall is seen from the Ring Road and is featured in every South Coast tour available.</p>
+            <p style="width:1000px;text-align:justify;">Skógafoss waterfall is a prominent waterfall by route 1 and marks the beginning of Fimmvörðuháls hike over to Þórsmörk. This waterfall is seen from the Ring Road and is featured in every South Coast tour available.</p>
             <p><small>Source: GuideToIceland.is<small></p>
                 <br>
-                <div id="fb-root"></div>
+                <img src="{% static "images/skogafoss.jpg" %}" alt="Skogafoss" width="1000"></img>
+            <h4><small><i>(Source: European Waterfalls)</i></small></h4>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1778.252800345107!2d-19.513565033952798!3d63.5320147242314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d73b7639a58c15%3A0xf60c71fcdfe7948!2sSk%C3%B3gafoss!5e0!3m2!1sen!2spl!4v1521597153192"
+                    width="1000" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+
                 <script>(function(d, s, id) {
                          var js, fjs = d.getElementsByTagName(s)[0];
                          if (d.getElementById(id)) return;
@@ -33,9 +30,7 @@
                          js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
                          fjs.parentNode.insertBefore(js, fjs);
                          }(document, 'script', 'facebook-jssdk'));</script>
-                <div class="fb-like" data-href="http://127.0.0.1:8000/ExploreIceland/waterfalls/skogafoss/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                <div class="fb-comments" data-href="http://127.0.0.1:8000/ExploreIceland/waterfalls/skogafoss/" data-numposts="5"></div>
-        </div>
-    </div>
-</div>
+                <div class="fb-like" data-href="http://exploreiceland.pythonanywhere.com/ExploreIceland/skogafoss/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                <div class="fb-comments" data-href="http://exploreiceland.pythonanywhere.com/ExploreIceland/skogafoss/" data-numposts="5"></div>
+
 {% endblock %}

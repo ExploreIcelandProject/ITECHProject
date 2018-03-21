@@ -13,41 +13,32 @@
         <div class="col-sm-1">
         </div>
         <div class="col-sm-10">
-            <h1 style="text-align:center">Waterfalls in Iceland</h1>
-            <h3 style="text-align:justify;">It has been said before that when
+            <h1>Waterfalls in Iceland</h1>
+            <p style="width:1000px;text-align:justify;">It has been said before that when
                 it comes to water, Iceland has an abundance of it – in all forms. Be
                 it in swimming pools, hot springs, geysers, lakes, glaciers, rivers or
                 waterfalls, Iceland is bursting at the seams. The waterfalls in
                 Iceland are countless. Every year, new ones form from melting glaciers
-                and almost every river has a few.</h3>
+                and almost every river has a few.</p>
             <br>
-            <h3 style="text-align:center;">Popular Waterfalls in Iceland</h3>
-            <h4 style="text-align:center"><a
-                href="{% url 'dettifoss' %}">1.
-                Dettifoss Falls</a></h4>
-            <img src="{% static "images/dettifoss.jpg" %}" alt="Dettifoss"
-                style="width:1200px;">
-                <h4 style="text-align:center"><a
-                    href="{% url 'skogafoss' %}">2.
-                    Skogafoss Falls</a></h4>
-                <img src="{% static "images/skogafoss.jpg" %}" alt="Skogafoss"
-                    style="width:1200px;">
-                    <h4 style="text-align:center"><a
-                        href="{% url 'gullfoss' %}">3.
-                        Gullfoss Falls</a></h4>
-                    <img src="{% static "images/gullfoss.jpg" %}"alt="Gullfoss"
-                        style="width:1200px;">
-                        <h4 style="text-align:center"><a
-                            href="{% url 'seljalandsfoss' %}">
-                            4. Seljalandsfoss Falls</a></h4>
-                        <img src="{% static "images/seljalandsfoss.jpg" %}" alt="Seljalandsfoss" style="width:1200px;">
-                            <h4 style="text-align:center"><a
-                                href="{% url 'dyjandi' %}">5.
-                                Dynjandi Falls</a></h4>
-                            <img src="{% static "images/dynjandi.jpg" %}"alt="Dynjandi"
-                                style="width:1200px;">
-                                <p>Source: GuideToIceland.is</p>
-                                <br>
+            <h3>Popular Waterfalls in Iceland</h3>
+            <h4 ><a href="{% url 'dettifoss' %}">1. Dettifoss Falls</a></h4>
+            <img src="{% static "images/dettifoss.jpg" %}" alt="Dettifoss" style="width:1000px;">
+
+            <h4 ><a href="{% url 'skogafoss' %}">2. Skogafoss Falls</a></h4>
+            <img src="{% static "images/skogafoss.jpg" %}" alt="Skogafoss" style="width:1000px;">
+
+            <h4><a href="{% url 'gullfoss' %}">3. Gullfoss Falls</a></h4>
+            <img src="{% static "images/gullfoss.jpg" %}"alt="Gullfoss" style="width:1000px;">
+
+            <h4><a href="{% url 'seljalandsfoss' %}"> 4. Seljalandsfoss Falls</a></h4>
+            <img src="{% static "images/seljalandsfoss.jpg" %}" alt="Seljalandsfoss" style="width:1000px;">
+
+            <h4><a href="{% url 'dyjandi' %}">5. Dynjandi Falls</a></h4>
+            <img src="{% static "images/dynjandi.jpg" %}"alt="Dynjandi" style="width:1000px;">
+
+            <p>Source: GuideToIceland.is</p>
+            <br>
                                 <div id="fb-root"></div>
                                 <script>(function(d, s, id) {
                                          var js, fjs = d.getElementsByTagName(s)[0];
@@ -57,15 +48,12 @@
                                          'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
                                          fjs.parentNode.insertBefore(js, fjs);
                                          }(document, 'script', 'facebook-jssdk'));</script>
-                                <div class="fb-like" datahref="http://127.0.0.1:8000/ExploreIceland/waterfalls/"
+
+                                <div class="fb-like" datahref="http://exploreiceland.pythonanywhere.com/ExploreIceland/attractioncategory/attraction/waterfall/"
                                     datalayout="standard"
                                     data-action="like" data-size="small" data-showfaces="true"
                                     data-share="true"></div>
-                                <div class="fb-comments" datahref="http://127.0.0.1:8000/ExploreIceland/waterfalls/"
+                                <div class="fb-comments" datahref="http://exploreiceland.pythonanywhere.com/ExploreIceland/attractioncategory/attraction/waterfall/"
                                     datanumposts="5"></div>
-        </div>
-        <div class="col-sm-1">
-        </div>
-    </div>
-</div>
+
 {% endblock %}
