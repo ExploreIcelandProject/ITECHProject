@@ -30,11 +30,6 @@ class attractionPage(models.Model):
     def __str__(self):
         return self.title
 
-
-
-                             
-                             
-
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
     website = models.URLField(blank=True)
